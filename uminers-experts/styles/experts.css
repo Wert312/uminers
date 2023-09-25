@@ -437,7 +437,9 @@ html, body {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  opacity: 0.5;
+  background: url("/uminers-experts/assets/search (3) 1.svg");
+  background-repeat: no-repeat;
+  background-position: center right 18px;
   line-height: 160%;
 }
 @media (min-width: 768px) {
