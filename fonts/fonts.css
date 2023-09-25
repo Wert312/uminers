@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
+  src: url("https://fonts/Gilroy-Regular.woff2") format("woff2");
   font-weight: 500;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
+  src: url("https://fonts/Gilroy-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 
