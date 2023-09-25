@@ -1,15 +1,5 @@
+@import "../../fonts/fonts.css";
 @import "../styles/normalize.css";
-@font-face {
-  font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-}
-
 * {
   box-sizing: border-box;
 }
