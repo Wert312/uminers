@@ -1,0 +1,1151 @@
+@import "../../fonts/fonts";
+@import "../styles/mixins.scss";
+@import "/uminers-category/styles/normalize.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  font-family: "Gilroy", sans-serif;
+}
+
+// Общая обертка
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// Шапка
+
+.main-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__site-logo {
+    margin-left: 25px;
+
+    @include for-tablet {
+      margin-left: 30px;
+      width: 143px;
+      height: 16px;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 16px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include for-desktop {
+      margin: 0;
+    }
+  }
+
+  &__global-menu {
+    display: none;
+
+    @include for-desktop {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include for-desktop-large {
+      margin: 0 0 0 165px;
+    }
+
+    &-list {
+      @include for-desktop {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+      }
+    }
+
+    &-item {
+      color: #888A8F;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+
+      &--active {
+        color: #000000;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50px;
+          background: #3778FF;
+          top: 22px;
+          left: 51%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
+
+  &__language {
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 42px;
+    margin-left: auto;
+    cursor: pointer;
+
+    &-icon {
+      height: 16px;
+      width: 16px;
+      position: relative;
+      color: #3F3F3F;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        opacity: 0.1;
+        margin-left: 7px;
+        background: #000;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &__login-btn {
+    display: none;
+    cursor: pointer;
+
+    @include for-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      padding: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      width: 98px;
+      height: 38px;
+      border-radius: 50px;
+      background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
+    }
+
+    &-wrapper {
+      display: none;
+
+      @include for-tablet {
+        display: block;
+        margin-left: 24px;
+        padding: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    height: 60px;
+    padding: 0 20px 0 16px;
+    margin-bottom: 11px;
+    align-items: center;
+
+    @include for-tablet {
+      height: 82px;
+      margin-bottom: 0;
+      padding: 0 22px;
+    }
+
+    @include for-desktop {
+      max-width: 1140px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    @include for-desktop-large {
+      padding: 0;
+    }
+  }
+
+  &__mobile-menu {
+    @include for-tablet {
+      position: relative;
+      top: 4px;
+    }
+
+    @include for-desktop {
+      display: none;
+    }
+  }
+
+  &__sections {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 0 16px;
+    background: linear-gradient(90deg, rgba(94, 53, 255, 1) 5%, rgba(53, 122, 255, 1) 100%);
+
+    @include for-tablet {
+      padding: 0 22px;
+    }
+
+    @include for-desktop-large {
+      padding: 0;
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 42px;
+
+      @include for-desktop {
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      &-item-link {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+        width: max-content;
+      }
+    }
+
+    &-dropdown {
+      position: static;
+      display: inline-block;
+      cursor: pointer;
+      width: max-content;
+
+      svg {
+        margin-left: 5px;
+      }
+
+      &-links-wrapper {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-link {
+        text-decoration: none;
+        color: #000000;
+      }
+
+      &:hover {
+        .main-header__sections-dropdown-content-wrapper {
+          display: block;
+        }
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-dropdown-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+      position: absolute;
+      overflow: visible;
+      border-top: 3px solid #3778FF;
+      z-index: 10000;
+      border-radius: 6px;
+      background: #FFF;
+      box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.14);
+
+      h3 {
+        margin-top: 0;
+      }
+
+      @include for-tablet {
+        flex-direction: row;
+        padding: 22px 20px 22px 20px;
+        height: 240px;
+        width: 730px;
+        gap: 100px;
+      }
+
+      @include for-desktop {
+        width: 970px;
+        height: 286px;
+      }
+
+      @include for-desktop-large {
+        padding: 51px 0 71px 63px;
+        width: 1150px;
+      }
+
+      &-wrapper {
+        display: none;
+        position: absolute;
+        padding-top: 43px;
+
+        @include for-tablet {
+          width: 730px;
+        }
+
+        @include for-desktop {
+          width: 970px;
+        }
+
+        @include for-desktop-large {
+          width: 1150px;
+        }
+
+        &--offset {
+          left: 16px;
+
+          @include for-tablet {
+            left: 22px;
+          }
+
+          @include for-desktop-large {
+            left: 142px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Обертка содержимого главной страницы
+
+.main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  @include for-desktop-large {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 435px;
+    gap: 25px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 96px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+// Курсы криптовалют
+
+.crypto-rates {
+  &__container {
+    margin-top: 25px;
+    padding: 0 13px;
+
+    @include for-tablet {
+      padding: 0 22px;
+      margin-top: 32px;
+    }
+
+    @include for-desktop-large {
+      max-width: 474px;
+      width: 100%;
+      margin-top: 0;
+    }
+
+    @include for-desktop-large {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  &__block {
+    border-radius: 6px;
+    flex-grow: 1;
+    padding: 27px 14px 31px;
+    background: linear-gradient(154deg, #475EFF 2.67%, #0042CC 94.57%);
+
+    @include for-tablet {
+      padding: 30px 34px 52px 34px;
+    }
+
+    @include for-desktop-large {
+      padding: 30px 36px 57px 36px;
+    }
+
+    &-datetime {
+      &-wrapper {
+        display: flex;
+        margin-bottom: 28px;
+        justify-content: space-between;
+      }
+
+      &-item {
+        margin: 0;
+        color: #FFF;
+        text-align: right;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+      }
+    }
+
+    &-currencies-wrapper {
+      margin-bottom: 28px;
+
+      @include for-tablet {
+        margin-bottom: 38px;
+      }
+    }
+
+    &-buttons-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 21px;
+    }
+
+    &-button {
+      width: 266px;
+      height: 56px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background: none;
+      border: 1px solid white;
+      color: #FFF;
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+
+      @include for-tablet {
+        width: 315px;
+      }
+    }
+
+    &-currency {
+      display: flex;
+
+      &:not(:last-of-type) {
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+
+        @include for-tablet {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        margin-right: 9px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        @include for-tablet {
+          height: 50px;
+          width: 50px;
+          margin-right: 23px;
+        }
+
+        img {
+          height: 16px;
+          width: 16px;
+
+          @include for-tablet {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      &-data {
+        display: flex;
+        flex: 5;
+        flex-direction: column;
+      }
+
+      &-rate {
+        &:first-of-type {
+          margin-bottom: 6px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+        &-name, &-price, &-abbreviation, &-percentage {
+          margin: 0;
+          color: #FFF;
+          font-size: 16px;
+          font-style: normal;
+          line-height: 160%;
+        }
+
+        &-name, &-price {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+// Все новости
+
+.all-news {
+
+  &__container {
+    padding: 0 14px;
+
+    @include for-tablet {
+      padding: 0 22px;
+    }
+
+    @include for-desktop-large {
+      padding: 0;
+    }
+  }
+
+  &__header {
+    @include for-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      margin-top: 40px;
+    }
+
+    @include for-desktop-large {
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 6px;
+    margin: 22px 0;
+    overflow-x: auto;
+
+    @include for-tablet {
+      width: 460px;
+      gap: 10px;
+      margin: 0 0 0 auto;
+    }
+
+    @include for-desktop {
+      overflow-x: hidden;
+    }
+
+    @include for-desktop-large {
+      width: 100%;
+    }
+
+    &-item {
+      height: 40px;
+      padding: 0 38px;
+      display: flex;
+      font-size: 16px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      background: #F5F5F5;
+      cursor: pointer;
+
+      &--active {
+        color: #3778FF;
+      }
+    }
+  }
+
+  &__next-btn {
+    width: 32px;
+    height: 40px;
+    margin-left: 8px;
+    border-radius: 6px;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+
+    @include for-tablet {
+      width: 42px;
+      margin-left: 11px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 29px 0;
+
+    @include for-tablet {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      top: -4px;
+      position: relative;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @include for-tablet {
+      gap: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      padding-bottom: 40px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        margin-top: 26px;
+        width: 100%;
+        height: 1px;
+        opacity: 0.1;
+        background: #000;
+
+        @include for-tablet {
+          margin-top: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    @include for-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include for-desktop-large {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__card {
+    position: relative;
+    max-width: 294px;
+    margin: 0 auto;
+    cursor: pointer;
+
+
+    @include for-tablet {
+      max-width: 352px;
+    }
+
+    @include for-desktop {
+      max-width: 367px;
+    }
+
+    &-image {
+      object-fit: contain;
+
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      @include for-tablet {
+        max-width: 100%;
+        max-height: 200px;
+        height: 100%;
+        display: flex;
+      }
+    }
+
+    &:last-of-type {
+      &::after {
+        position: absolute;
+        content: '';
+        margin-top: 26px;
+        width: 100%;
+        height: 1px;
+        opacity: 0.1;
+        background: #000;
+
+        @include for-tablet {
+          content: none;
+        }
+      }
+    }
+
+    &-date {
+      padding-top: 16px;
+      color: #3778FF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      opacity: 0.99;
+    }
+
+    &-summary {
+      padding-top: 5px;
+      margin: 0;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+      height: 87px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &-button {
+      display: flex;
+      width: 52px;
+      height: 38px;
+      margin-top: 14px;
+      border-radius: 10px;
+      background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  &__show-button {
+    width: 220px;
+    height: 56px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    margin: 57px auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
+    cursor: pointer;
+
+    @include for-tablet {
+      margin: 30px auto 0 auto;
+    }
+  }
+}
+
+// Подписка на новостную рассылку
+
+.newsletter {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 24px;
+    border-radius: 6px;
+    background-color: #F9F9F9;
+    margin: 32px 14px 0 14px;
+    height: 311px;
+    background-image: url(/uminers-category/assets/newsletter-small-background.svg);
+    background-repeat: no-repeat;
+    background-position: top right -5px;
+
+    @include for-tablet {
+      height: auto;
+      margin: 30px 24px 0 24px;
+      padding: 47px 42px 65px 48px;
+      background-position: top 10px center;
+    }
+
+    @include for-desktop-large {
+      width: 100%;
+      margin: 24px 0 30px 0;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    margin: 0 0 26px;
+
+    @include for-tablet {
+      width: 354px;
+    }
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet {
+      flex-direction: row;
+      gap: 31px;
+    }
+
+    @include for-desktop-large {
+      flex-direction: row;
+      gap: 25px;
+    }
+  }
+
+  &__email {
+    width: 100%;
+    max-width: 333px;
+    height: 50px;
+    border: 1px solid rgba(196, 196, 196, 0.50);
+    background: #FFF;
+    padding-left: 23px;
+    margin: 0 auto 28px auto;
+
+    @include for-tablet {
+      width: 312px;
+      margin: 0 0 24px 0;
+    }
+
+    @include for-desktop-large {
+      margin: 0;
+      width: 340px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 270px;
+    height: 50px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
+    cursor: pointer;
+
+    @include for-tablet {
+      margin: 0;
+    }
+  }
+}
+
+// Свежие статьи
+
+.new-articles {
+
+  &__container {
+    margin: 32px 14px 0;
+    padding: 27px 23px;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
+
+    @include for-tablet {
+      margin: 30px 22px 0;
+      padding: 30px 42px 50px 45px;
+    }
+
+    @include for-desktop-large {
+      margin: 0;
+      padding: 30px 45px 44px;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+
+      @include for-tablet {
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__summary {
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+
+    @include for-tablet {
+      margin-top: 23px;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    margin: 0;
+    opacity: .3;
+    width: 112px;
+
+    @include for-tablet {
+      width: auto;
+    }
+  }
+
+  &__datetime {
+    margin: 0;
+    color: #3778FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+  padding-bottom: 50px;
+  background: #000015;
+
+  @include for-tablet {
+    padding-top: 66px;
+    padding-bottom: 36px;
+  }
+
+  @include for-desktop-large {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  &__content {
+    @include for-desktop-large {
+      width: 1140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:last-of-type {
+      @include for-desktop-large {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @include for-desktop-large {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    text-align: center;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%;
+
+    @include for-desktop-large {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @include for-tablet {
+      display: flex;
+      gap: 30px;
+    }
+
+    &-item {
+      @include for-tablet {
+        position: relative;
+        &:not(:last-of-type) {
+          &::after {
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 1px;
+            opacity: 0.15;
+            background: #FFF;
+            bottom: 4px;
+            right: -15px;
+          }
+        }
+      }
+    }
+
+    &--accent {
+      color: #709EFF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 180%;
+      text-decoration: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 23px;
+
+    @include for-tablet {
+      margin-top: 34px;
+    }
+
+    @include for-desktop-large {
+      margin-top: 0;
+    }
+  }
+
+  &__divider {
+    width: 280px;
+    height: 1px;
+    opacity: 0.15;
+    box-sizing: border-box;
+    background: #FFF;
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    @include for-tablet {
+      margin-top: 39px;
+      margin-bottom: 34px;
+      width: 580px;
+    }
+
+    @include for-desktop-large {
+      width: 100%;
+      margin: 30px 0;
+    }
+  }
+
+  &__policy {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet {
+      flex-direction: row;
+    }
+
+    &-item {
+      text-decoration: none;
+      color: #ffffff;
+
+      &:first-of-type {
+        margin-bottom: 12px;
+
+        @include for-tablet {
+          margin-bottom: 0;
+          margin-right: 24px;
+        }
+      }
+    }
+
+    &-logo {
+      display: flex;
+      width: 108px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px auto 0 auto;
+
+      @include for-tablet {
+        margin: 0 0 0 36px;
+      }
+    }
+  }
+
+  &__copyright {
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    opacity: 0.6;
+    margin-top: 47px;
+
+    p {
+      margin: 0;
+
+      @include for-tablet {
+        &:first-of-type {
+          margin-right: 3px;
+        }
+      }
+    }
+
+    @include for-tablet {
+      margin-top: 34px;
+      display: flex;
+    }
+
+    @include for-desktop-large {
+      margin-top: 0;
+    }
+  }
+}
+
+

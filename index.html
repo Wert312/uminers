@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uminers</title>
+    <link rel="stylesheet" href="uminers-main/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="uminers-main/scripts/swiper.js"></script>
+</head>
+<body>
+<div class="page-container">
+    <header class="main-header">
+        <div class="main-header__menu">
+            <div class="main-header__mobile-menu">
+                <img src="uminers-main/assets/mobile-menu.svg" alt="mobile menu logo">
+            </div>
+            <div class="main-header__site-logo">
+                <a href="index.html" class="site-logo__link">
+                    <img src="uminers-main/assets/uminers-logo.svg" alt="main logo">
+                </a>
+            </div>
+            <div class="main-header__global-menu">
+                <ul class="main-header__global-menu-list">
+                    <li class="main-header__global-menu-item">Главная</li>
+                    <li class="main-header__global-menu-item">Маркетплейс</li>
+                    <li class="main-header__global-menu-item">Логистика</li>
+                    <li class="main-header__global-menu-item">Хостинг</li>
+                    <li class="main-header__global-menu-item main-header__global-menu-item--active">Медиа</li>
+                    <li class="main-header__global-menu-item">Контакты</li>
+                </ul>
+            </div>
+            <div class="main-header__language">
+                <div class="main-header__language-icon">
+                    <img src="uminers-main/assets/Flag_of_Russia.svg.png" alt="russian flag">
+                </div>
+                <div class="main-header__language-dropdown-icon">
+                    <img src="uminers-main/assets/arrow-dropdown.svg" alt="dropdown icon">
+                </div>
+            </div>
+            <div class="main-header__login-btn-wrapper">
+                <button class="main-header__login-btn">Войти</button>
+            </div>
+        </div>
+        <nav class="main-header__sections">
+            <ul class="main-header__sections-list">
+                <li class="main-header__sections-dropdown">
+                    <a class="main-header__sections-list-item-link">Новости</a>
+                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 21" d="M1 1L5.5 5.5L10 1" stroke="white"/>
+                    </svg>
+                    <div class="main-header__sections-dropdown-content-wrapper">
+                        <div class="main-header__sections-dropdown-content">
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Главные новости</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                    <a href="uminers-category/category.html" class="main-header__sections-dropdown-link">Майнинг</a>
+                                    <a href="" class="main-header__sections-dropdown-link">Регулирование</a>
+                                    <a href="" class="main-header__sections-dropdown-link">Трейдинг</a>
+                                </div>
+                            </div>
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Криптовалюты</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                    <a href="" class="main-header__sections-dropdown-link">Биткоин</a>
+                                    <a href="" class="main-header__sections-dropdown-link">Эфириум</a>
+                                    <a href="" class="main-header__sections-dropdown-link">Альткоины</a>
+                                </div>
+                            </div>
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Технологии Blockchain</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                    <a href="" class="main-header__sections-dropdown-link">NFT</a>
+                                    <a href="" class="main-header__sections-dropdown-link">DeFi</a>
+                                    <a href="" class="main-header__sections-dropdown-link">Безопасность</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-header__sections-dropdown">
+                    <a class="main-header__sections-list-item-link">Эксклюзивные материалы</a>
+                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector 21" d="M1 1L5.5 5.5L10 1" stroke="white"/>
+                    </svg>
+                    <div class="main-header__sections-dropdown-content-wrapper main-header__sections-dropdown-content-wrapper--offset">
+                        <div class="main-header__sections-dropdown-content">
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Интервью</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                </div>
+                            </div>
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Авторские статьи</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                </div>
+                            </div>
+                            <div class="main-header__sections-dropdown-block">
+                                <h3 class="main-header__sections-dropdown-title">Эксперты</h3>
+                                <div class="main-header__sections-dropdown-links-wrapper">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-header__sections-list-item">
+                    <a class="main-header__sections-list-item-link" href="">События</a>
+                </li>
+                <li class="main-header__sections-list-item">
+                    <a class="main-header__sections-list-item-link" href="">Крипто прогнозы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="main-news__container">
+            <h2 class="main-news__title">Главные новости дня</h2>
+            <div class="main-news__card">
+                <div class="main-news__card-image">
+                    <img src="uminers-main/assets/shutterstock_1708749826_small.webp" alt="test news image">
+                </div>
+                <div class="main-news__card-info">
+                    <div class="main-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="main-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                </div>
+            </div>
+            <div class="main-news__card">
+                <div class="main-news__card-image">
+                    <img src="uminers-main/assets/image%202.png" alt="test news image">
+                </div>
+                <div class="main-news__card-info">
+                    <div class="main-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="main-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                </div>
+            </div>
+            <div class="main-news__card">
+                <div class="main-news__card-image">
+                    <img src="uminers-main/assets/image%202.png" alt="test news image">
+                </div>
+                <div class="main-news__card-info">
+                    <div class="main-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="main-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                </div>
+            </div>
+            <div class="main-news__card">
+                <div class="main-news__card-image">
+                    <img src="uminers-main/assets/image%202.png" alt="test news image">
+                </div>
+                <div class="main-news__card-info">
+                    <div class="main-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="main-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                </div>
+            </div>
+            <a href="" class="main-news__all-news">Все новости</a>
+        </div>
+        <div class="crypto-rates__container">
+            <h2 class="crypto-rates__title">Курсы криптовалют</h2>
+            <div class="crypto-rates__block">
+                <div class="crypto-rates__block-datetime-wrapper">
+                    <p class="crypto-rates__block-datetime-item">17.04.2024</p>
+                    <p class="crypto-rates__block-datetime-item">15:28</p>
+                </div>
+                <div class="crypto-rates__block-currencies-wrapper">
+                    <div class="crypto-rates__block-currency">
+                        <div class="crypto-rates__block-currency-icon">
+                            <img src="uminers-main/assets/image%2024.svg" alt="currency image">
+                        </div>
+                        <div class="crypto-rates__block-currency-data">
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                            </div>
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crypto-rates__block-currency">
+                        <div class="crypto-rates__block-currency-icon">
+                            <img src="uminers-main/assets/image%2024.svg" alt="currency image">
+                        </div>
+                        <div class="crypto-rates__block-currency-data">
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                            </div>
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crypto-rates__block-currency">
+                        <div class="crypto-rates__block-currency-icon">
+                            <img src="uminers-main/assets/image%2024.svg" alt="currency image">
+                        </div>
+                        <div class="crypto-rates__block-currency-data">
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                            </div>
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crypto-rates__block-currency">
+                        <div class="crypto-rates__block-currency-icon">
+                            <img src="uminers-main/assets/image%2024.svg" alt="currency image">
+                        </div>
+                        <div class="crypto-rates__block-currency-data">
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                            </div>
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crypto-rates__block-currency">
+                        <div class="crypto-rates__block-currency-icon">
+                            <img src="uminers-main/assets/image%2024.svg" alt="currency image">
+                        </div>
+                        <div class="crypto-rates__block-currency-data">
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                            </div>
+                            <div class="crypto-rates__block-currency-rate">
+                                <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crypto-rates__block-buttons-wrapper">
+                    <button class="crypto-rates__block-button">Смотреть все курсы валют</button>
+                    <button class="crypto-rates__block-button">Смотреть новости криптовалют</button>
+                </div>
+            </div>
+        </div>
+        <div class="top-news__container">
+            <div class="top-news__block top-news__block--week">
+                <div class="top-news__block-title">Новость недели</div>
+                <div class="top-news__block-description">
+                    <p class="top-news__block-datetime">12.03.2023</p>
+                    <p class="top-news__block-summary">Основатель Tron опроверг сообщение, что криптовалютная биржа
+                        Huobi ищет покупателя</p>
+                </div>
+            </div>
+            <div class="top-news__block top-news__block--month">
+                <div class="top-news__block-title">Новость месяца</div>
+                <div class="top-news__block-description">
+                    <p class="top-news__block-datetime">12.03.2023</p>
+                    <p class="top-news__block-summary">Крипторынок России получит ежегодный рейтинг экспертов</p>
+                </div>
+            </div>
+        </div>
+        <div class="all-news__container">
+            <div class="all-news__header">
+                <h2 class="all-news__title">Все новости</h2>
+                <div class="all-news__header-content">
+                    <div class="all-news__menu">
+                        <div class="all-news__menu-item all-news__menu-item--active">Все</div>
+                        <div class="all-news__menu-item">Майнинг</div>
+                        <div class="all-news__menu-item">Регулирование</div>
+                        <div class="all-news__menu-item">Трейдинг</div>
+                        <div class="all-news__menu-item">Биткоин</div>
+                    </div>
+                    <button class="all-news__next-btn">
+                        <img src="uminers-main/assets/menu-next-arrow.svg" alt="arrow next">
+                    </button>
+                </div>
+            </div>
+            <div class="all-news__content">
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/image%205.png" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/image%206.png" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/image%209.png" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/shutterstock_1708749826_small.webp" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/shutterstock_1708749826_small.webp" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+                <div class="all-news__card">
+                    <div class="all-news__card-image">
+                        <img src="uminers-main/assets/shutterstock_1708749826_small.webp" alt="test news image">
+                    </div>
+                    <div class="all-news__card-date">
+                        03 May 2021
+                    </div>
+                    <p class="all-news__card-summary">
+                        Испытания реальных операций
+                        с цифровым рублем Банка России состоятся в мае
+                    </p>
+                    <a class="all-news__card-button">
+                        <img src="uminers-main/assets/Arrow.svg" alt="arrow icon">
+                    </a>
+                </div>
+            </div>
+            <div class="all-news__show-button">Показать еще</div>
+        </div>
+        <div class="experts__container">
+            <div class="experts__title-wrapper">
+                <h2 class="experts__title">Наши эксперты</h2>
+                <a href="uminers-experts/experts.html" class="experts__all-experts">Все эксперты</a>
+            </div>
+            <div class="experts__slider swiper swiper1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="experts__slide swiper-slide">
+                        <div class="experts__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="experts__slide-description">
+                            <h3 class="experts__slide-title">Илья Ткаченко</h3>
+                            <p class="experts__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="experts__slide swiper-slide">
+                        <div class="experts__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="experts__slide-description">
+                            <h3 class="experts__slide-title">Илья Ткаченко</h3>
+                            <p class="experts__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="experts__slide swiper-slide">
+                        <div class="experts__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="experts__slide-description">
+                            <h3 class="experts__slide-title">Илья Ткаченко</h3>
+                            <p class="experts__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="experts__slide swiper-slide">
+                        <div class="experts__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="experts__slide-description">
+                            <h3 class="experts__slide-title">Илья Ткаченко</h3>
+                            <p class="experts__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="experts__slide swiper-slide">
+                        <div class="experts__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="experts__slide-description">
+                            <h3 class="experts__slide-title">Илья Ткаченко</h3>
+                            <p class="experts__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="experts__pagination swiper-pagination swiper-pagination1"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="achievements__container">
+            <h2 class="achievements__title">Наши достижения</h2>
+            <div class="achievements__slider swiper swiper1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                    <div class="achievements__slide swiper-slide">
+                        <div class="achievements__slide-image">
+                            <img src="uminers-main/assets/image%2018.png" alt="achievements slide">
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="achievements__pagination swiper-pagination swiper-pagination1"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="team__container">
+            <h2 class="team__title">Наша команда</h2>
+            <div class="team__slider swiper swiper2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="team__slide swiper-slide">
+                        <div class="team__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="team__slide-description">
+                            <h3 class="team__slide-title">Илья Ткаченко</h3>
+                            <p class="team__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="team__slide swiper-slide">
+                        <div class="team__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="team__slide-description">
+                            <h3 class="team__slide-title">Илья Ткаченко</h3>
+                            <p class="team__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="team__slide swiper-slide">
+                        <div class="team__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="team__slide-description">
+                            <h3 class="team__slide-title">Илья Ткаченко</h3>
+                            <p class="team__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                    <div class="team__slide swiper-slide">
+                        <div class="team__slide-image">
+                            <img src="uminers-main/assets/image%2020.png" alt="expert slide">
+                        </div>
+                        <div class="team__slide-description">
+                            <h3 class="team__slide-title">Илья Ткаченко</h3>
+                            <p class="team__slide-text">Директор Binance в Восточной
+                                Европе</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="team__pagination swiper-pagination swiper-pagination2"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="newsletter__container">
+            <h2 class="newsletter__title">Подпишитесь
+                на новостную рассылку</h2>
+            <p class="newsletter__text">Чтобы оставаться в курсе последних событий</p>
+            <div class="newsletter__form-wrapper">
+                <input type="email" placeholder="Ваш E-mail" class="newsletter__email">
+                <button class="newsletter__button">Подписаться</button>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="main-footer__content">
+            <div class="main-footer__block">
+                <div class="main-footer__logo">
+                    <img src="uminers-main/assets/main-logo--white.svg" alt="main logo">
+                </div>
+                <div class="main-footer__contacts">
+                    <p class="main-footer__contacts-item">Багратионовский проезд 7к20б</p>
+                    <p class="main-footer__contacts-item"><a href="mailto: sales@uminers.com"
+                                                             class="main-footer__contacts--accent">sales@uminers.com</a></p>
+                    <p class="main-footer__contacts-item">telegram
+                        <a href="https://t.me/uminers_sales" class="main-footer__contacts--accent">@uminers_sales</a>
+                    </p>
+                </div>
+                <div class="main-footer__socials">
+                    <div class="main-footer__socials-item">
+                        <a href="https://t.me/uminers_sales">
+                            <img src="uminers-main/assets/telegram.svg" alt="telegram icon">
+                        </a>
+                    </div>
+                    <div class="main-footer__socials-item">
+                        <img src="uminers-main/assets/wechat.svg" alt="wechat icon">
+                    </div>
+                    <div class="main-footer__socials-item">
+                        <img src="uminers-main/assets/youtube.svg" alt="youtube icon">
+                    </div>
+                    <div class="main-footer__socials-item">
+                        <img src="uminers-main/assets/whatsapp.svg" alt="whatsapp icon">
+                    </div>
+                    <div class="main-footer__socials-item">
+                        <img src="uminers-main/assets/instagram.svg" alt="instagram icon">
+                    </div>
+                </div>
+            </div>
+            <hr class="main-footer__divider">
+            <div class="main-footer__block">
+                <div class="main-footer__policy">
+                    <a href="" class="main-footer__policy-item">Конфиденциальность</a>
+                    <a href="" class="main-footer__policy-item">Правила пользования</a>
+                    <div class="main-footer__policy-logo">
+                        By <img src="uminers-main/assets/uasia.svg" alt="uasia logo">
+                    </div>
+                </div>
+                <div class="main-footer__copyright">
+                    <p>© 2017-2023 UMINERS TECHNOLOGY</p>
+                    <p>PTE. LTD. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
