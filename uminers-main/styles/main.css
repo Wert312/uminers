@@ -1317,6 +1317,7 @@ html, body {
 }
 .experts__slider {
   width: 100%;
+  max-width: 280px;
   margin: 16px auto 0 auto;
   height: 390px;
   padding: 0 6px 34px !important;
@@ -1325,6 +1326,7 @@ html, body {
   .experts__slider {
     height: 362px;
     width: 562px;
+    max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -1426,7 +1428,6 @@ html, body {
 .achievements__slider {
   width: 100%;
   margin: 16px auto 0 auto;
-  height: 390px;
   padding: 0 6px 34px !important;
 }
 @media (min-width: 768px) {
