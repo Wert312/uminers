@@ -1,4 +1,4 @@
-@import "/uminers-category/styles/normalize.css";
+@import "../styles/normalize.css";
 @font-face {
   font-family: "Gilroy";
   src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
