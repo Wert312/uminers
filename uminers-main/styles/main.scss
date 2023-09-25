@@ -1,6 +1,6 @@
 @import "../../fonts/fonts";
 @import "../styles/mixins.scss";
-@import "../styles/normalize";
+@import "../styles/normalize.css";
 
 * {
   box-sizing: border-box;
@@ -1383,7 +1383,7 @@ html, body {
     background-color: #F9F9F9;
     margin: 56px 14px 0 14px;
     height: 679px;
-    background-image: url(/uminers-main/assets/newsletter-main.svg);
+    background-image: url('../assets/newsletter-main.svg');
     background-repeat: no-repeat;
     background-position: bottom right -22px;
 
