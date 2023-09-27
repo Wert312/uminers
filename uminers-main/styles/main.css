@@ -1,5 +1,15 @@
-@import "../../fonts/fonts.css";
 @import "../styles/normalize.css";
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -98,6 +108,15 @@ html, body {
   width: 42px;
   margin-left: auto;
   cursor: pointer;
+  position: relative;
+}
+.main-header__language:hover .main-header__language-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-header__language-dropdown-icon {
+  margin-left: 15px;
 }
 .main-header__language-icon {
   height: 16px;
@@ -115,6 +134,32 @@ html, body {
   background: #000;
 }
 .main-header__language-icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+}
+.main-header__language-dropdown-wrapper {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.main-header__language-dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 28px;
+  border-top: 3px solid #3778FF;
+  z-index: 10000;
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.14);
+}
+.main-header__language-change-icon {
+  width: 16px;
+  height: 16px;
+}
+.main-header__language-change-icon img {
   height: 100%;
   width: 100%;
   border-radius: 50px;
@@ -258,12 +303,16 @@ html, body {
   gap: 30px;
   padding: 20px;
   position: absolute;
+  width: calc(100% - 33px);
   overflow: visible;
   border-top: 3px solid #3778FF;
   z-index: 10000;
   border-radius: 6px;
   background: #FFF;
   box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.14);
+}
+.main-header__sections-dropdown-content-wrapper {
+  width: 100%;
 }
 .main-header__sections-dropdown-content h3 {
   margin-top: 0;
@@ -379,10 +428,15 @@ html, body {
 }
 .main-news__card {
   position: relative;
-  max-width: 294px;
   margin-bottom: 9px;
   text-decoration: none;
   cursor: pointer;
+  width: 100%;
+}
+@media (orientation: landscape) {
+  .main-news__card {
+    max-width: 294px;
+  }
 }
 @media (min-width: 768px) {
   .main-news__card {
@@ -390,13 +444,28 @@ html, body {
     max-width: 100%;
   }
 }
+@media (orientation: landscape) {
+  .main-news__card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 .main-news__card-image {
   object-fit: contain;
+  display: flex;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .main-news__card-image {
+    height: 121px;
+    width: 215px;
+  }
 }
 .main-news__card-image img {
-  max-width: 100%;
-  max-height: 200px;
+  width: 100%;
   object-fit: cover;
+  border-radius: 6px;
 }
 .main-news__card-info {
   display: flex;
@@ -645,6 +714,14 @@ html, body {
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  padding: 0 13px;
+}
+@media (orientation: landscape) {
+  .top-news__container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
 }
 @media (min-width: 768px) {
   .top-news__container {
@@ -670,10 +747,15 @@ html, body {
 
 .top-news__block {
   height: 286px;
-  width: 292px;
   border-radius: 6px;
   padding: 20px 20px 17px 13px;
   cursor: pointer;
+}
+@media (orientation: landscape) {
+  .top-news__block {
+    flex: 1;
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   .top-news__block {
@@ -821,9 +903,9 @@ html, body {
   }
 }
 .all-news__content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
 }
 @media (min-width: 768px) {
   .all-news__content {
@@ -856,7 +938,6 @@ html, body {
 }
 .all-news__card {
   position: relative;
-  max-width: 294px;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -874,7 +955,9 @@ html, body {
   object-fit: contain;
 }
 .all-news__card-image img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 6px;
+  height: 208px;
   object-fit: cover;
 }
 @media (min-width: 768px) {
@@ -893,6 +976,11 @@ html, body {
   height: 1px;
   opacity: 0.1;
   background: #000;
+}
+@media (orientation: landscape) {
+  .all-news__card:last-of-type::after {
+    content: none;
+  }
 }
 @media (min-width: 768px) {
   .all-news__card:last-of-type::after {
@@ -1151,6 +1239,8 @@ html, body {
 }
 .achievements__slide-image img {
   width: 100%;
+  max-height: 340px;
+  object-fit: contain;
 }
 .achievements__slide-description {
   padding-top: 22px;
@@ -1383,6 +1473,7 @@ html, body {
   width: 236px;
   height: 50px;
   color: #ffffff;
+  font-weight: 700;
   border: none;
   border-radius: 50px;
   margin: 0 auto;

@@ -19,6 +19,46 @@ html, body {
   flex-direction: column;
 }
 
+.breadcrumbs__container {
+  max-width: 1140px;
+  margin: 30px auto 0 14px;
+  display: flex;
+  gap: 4px;
+  height: fit-content;
+}
+@media (min-width: 768px) {
+  .breadcrumbs__container {
+    margin-left: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .breadcrumbs__container {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: auto;
+    width: 100%;
+    margin-right: auto;
+  }
+}
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.breadcrumbs__link:not(:first-of-type)::before {
+  content: "/";
+  color: #888A8F;
+  display: inline-block;
+  width: 10px;
+}
+.breadcrumbs__link:last-of-type {
+  color: #888A8F;
+}
+.breadcrumbs__link:last-of-type::before {
+  color: #888A8F;
+}
+
 .main-header {
   width: 100%;
   display: flex;
@@ -362,425 +402,208 @@ html, body {
   }
 }
 
-.main-content {
+.side__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .side__container {
+    gap: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .side__container {
+    gap: 20px;
+  }
+}
+
+.main-content-wrapper {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 70px;
+  padding: 22px 14px 70px;
+}
+@media (min-width: 768px) {
+  .main-content-wrapper {
+    padding: 30px 22px 70px;
+  }
 }
 @media (min-width: 1200px) {
-  .main-content {
+  .main-content-wrapper {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 435px;
-    gap: 25px;
+    gap: 20px;
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 96px;
+    padding: 45px 0 96px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
   }
 }
 
-.crypto-rates__container {
-  margin-top: 25px;
-  padding: 0 13px;
+.author__block {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: #FFF;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.1);
+  padding: 16px 22px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
 }
 @media (min-width: 768px) {
-  .crypto-rates__container {
-    padding: 0 22px;
-    margin-top: 32px;
+  .author__block {
+    flex-direction: row;
+    gap: 26px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 39px;
+    align-items: flex-start;
   }
 }
 @media (min-width: 1200px) {
-  .crypto-rates__container {
-    max-width: 474px;
-    width: 100%;
-    margin-top: 0;
+  .author__block {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 51px 17px 58px 44px;
   }
 }
-@media (min-width: 1200px) {
-  .crypto-rates__container {
-    padding: 0;
-  }
-}
-.crypto-rates__title {
-  margin: 0 0 22px;
-  color: #000;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-.crypto-rates__block {
-  border-radius: 6px;
-  flex-grow: 1;
-  padding: 27px 14px 31px;
-  background: linear-gradient(154deg, #475EFF 2.67%, #0042CC 94.57%);
-}
-@media (min-width: 768px) {
-  .crypto-rates__block {
-    padding: 30px 34px 52px 34px;
-  }
-}
-@media (min-width: 1200px) {
-  .crypto-rates__block {
-    padding: 30px 36px 57px 36px;
-  }
-}
-.crypto-rates__block-datetime-wrapper {
-  display: flex;
-  margin-bottom: 28px;
-  justify-content: space-between;
-}
-.crypto-rates__block-datetime-item {
-  margin: 0;
-  color: #FFF;
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-.crypto-rates__block-currencies-wrapper {
-  margin-bottom: 28px;
-}
-@media (min-width: 768px) {
-  .crypto-rates__block-currencies-wrapper {
-    margin-bottom: 38px;
-  }
-}
-.crypto-rates__block-buttons-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 21px;
-}
-.crypto-rates__block-button {
-  width: 266px;
-  height: 56px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  background: none;
-  border: 1px solid white;
-  color: #FFF;
-  text-align: center;
-  font-weight: 700;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .crypto-rates__block-button {
-    width: 315px;
-  }
-}
-.crypto-rates__block-currency {
-  display: flex;
-}
-.crypto-rates__block-currency:not(:last-of-type) {
-  padding-bottom: 14px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid rgba(217, 217, 217, 0.3);
-}
-@media (min-width: 768px) {
-  .crypto-rates__block-currency:not(:last-of-type) {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-}
-.crypto-rates__block-currency-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  margin-right: 9px;
+.author__block-image {
+  margin-bottom: 13px;
   border-radius: 50%;
-  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.author__block-image img {
+  height: 100px;
 }
 @media (min-width: 768px) {
-  .crypto-rates__block-currency-icon {
-    height: 50px;
-    width: 50px;
-    margin-right: 23px;
+  .author__block-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
-.crypto-rates__block-currency-icon img {
-  height: 16px;
-  width: 16px;
-}
-@media (min-width: 768px) {
-  .crypto-rates__block-currency-icon img {
-    width: 30px;
-    height: 30px;
-  }
-}
-.crypto-rates__block-currency-data {
-  display: flex;
-  flex: 5;
-  flex-direction: column;
-}
-.crypto-rates__block-currency-rate {
-  display: flex;
-  justify-content: space-between;
-}
-.crypto-rates__block-currency-rate:first-of-type {
-  margin-bottom: 6px;
-}
-.crypto-rates__block-currency-rate-name, .crypto-rates__block-currency-rate-price, .crypto-rates__block-currency-rate-abbreviation, .crypto-rates__block-currency-rate-percentage {
-  margin: 0;
-  color: #FFF;
-  font-size: 16px;
+.author__block-name {
+  font-size: 18px;
   font-style: normal;
-  line-height: 160%;
-}
-.crypto-rates__block-currency-rate-name, .crypto-rates__block-currency-rate-price {
   font-weight: 700;
-}
-
-.all-news__container {
-  padding: 0 14px;
-}
-@media (min-width: 768px) {
-  .all-news__container {
-    padding: 0 22px;
-  }
-}
-@media (min-width: 1200px) {
-  .all-news__container {
-    padding: 0;
-  }
+  line-height: 140%;
+  text-align: center;
+  margin: 0;
 }
 @media (min-width: 768px) {
-  .all-news__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    margin-top: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .all-news__header {
-    margin-top: 0;
-    margin-bottom: 26px;
-  }
-}
-.all-news__header-content {
-  display: flex;
-  align-items: center;
-}
-.all-news__menu {
-  display: flex;
-  gap: 6px;
-  margin: 22px 0;
-  overflow-x: auto;
-}
-@media (min-width: 768px) {
-  .all-news__menu {
-    width: 460px;
-    gap: 10px;
-    margin: 0 0 0 auto;
-  }
-}
-@media (min-width: 992px) {
-  .all-news__menu {
-    overflow-x: hidden;
-  }
-}
-@media (min-width: 1200px) {
-  .all-news__menu {
-    width: 100%;
-  }
-}
-.all-news__menu-item {
-  height: 40px;
-  padding: 0 38px;
-  display: flex;
-  font-size: 16px;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  background: #F5F5F5;
-  cursor: pointer;
-}
-.all-news__menu-item--active {
-  color: #3778FF;
-}
-.all-news__next-btn {
-  width: 32px;
-  height: 40px;
-  margin-left: 8px;
-  border-radius: 6px;
-  background: #F5F5F5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .all-news__next-btn {
-    width: 42px;
-    margin-left: 11px;
-  }
-}
-.all-news__title {
-  margin: 0 0 29px 0;
-}
-@media (min-width: 768px) {
-  .all-news__title {
-    margin: 0;
+  .author__block-name {
     font-size: 32px;
+    font-style: normal;
     font-weight: 700;
-    top: -4px;
-    position: relative;
   }
 }
-.all-news__content {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-@media (min-width: 768px) {
-  .all-news__content {
-    gap: 24px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    padding-bottom: 40px;
-  }
-  .all-news__content::after {
-    position: absolute;
-    content: "";
-    margin-top: 26px;
-    width: 100%;
-    height: 1px;
-    opacity: 0.1;
-    background: #000;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .all-news__content::after {
-    margin-top: 0;
-    bottom: 0;
-  }
-}
-@media (min-width: 992px) {
-  .all-news__content {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .all-news__content {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.all-news__card {
-  position: relative;
-  max-width: 294px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .all-news__card {
-    max-width: 352px;
-  }
-}
-@media (min-width: 992px) {
-  .all-news__card {
-    max-width: 367px;
-  }
-}
-.all-news__card-image {
-  object-fit: contain;
-}
-.all-news__card-image img {
-  max-width: 100%;
-  object-fit: cover;
-}
-@media (min-width: 768px) {
-  .all-news__card-image {
-    max-width: 100%;
-    max-height: 200px;
-    height: 100%;
-    display: flex;
-  }
-}
-.all-news__card:last-of-type::after {
-  position: absolute;
-  content: "";
-  margin-top: 26px;
-  width: 100%;
-  height: 1px;
-  opacity: 0.1;
-  background: #000;
-}
-@media (min-width: 768px) {
-  .all-news__card:last-of-type::after {
-    content: none;
-  }
-}
-.all-news__card-date {
-  padding-top: 16px;
-  color: #3778FF;
-  font-size: 14px;
+.author__block-position {
+  margin: 0 0 19px 0;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
-  opacity: 0.99;
+  padding-bottom: 19px;
 }
-.all-news__card-summary {
-  padding-top: 5px;
-  margin: 0;
-  color: #000;
+@media (min-width: 768px) {
+  .author__block-position {
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+.author__block-description {
+  position: relative;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 160%;
-  height: 87px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  margin: 0;
 }
-.all-news__card-button {
+@media (min-width: 768px) {
+  .author__block-description {
+    margin-top: 15px;
+  }
+}
+.author__block-description::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  opacity: 0.1;
+  background: #000;
+  top: -19px;
+}
+@media (min-width: 768px) {
+  .author__block-description::before {
+    content: none;
+  }
+}
+.author__block-socials {
+  margin-top: 27px;
   display: flex;
-  width: 52px;
-  height: 38px;
-  margin-top: 14px;
-  border-radius: 10px;
-  background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
+  gap: 9px;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
-.all-news__show-button {
-  width: 220px;
-  height: 56px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-style: normal;
+@media (min-width: 768px) {
+  .author__block-socials {
+    margin-top: 0;
+  }
+}
+.author__block-socials-item {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(217, 217, 217, 0.5);
+}
+.author__block-socials-item--add {
+  background: #3778FF;
+  color: white;
+  font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+}
+.author__block-socials-wrapper {
+  margin-top: 33px;
   display: flex;
-  margin: 57px auto 0 auto;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
+}
+@media (min-width: 768px) {
+  .author__block-socials-wrapper {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+}
+.author__block__button {
+  width: 100%;
+  max-width: 270px;
+  height: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .all-news__show-button {
-    margin: 30px auto 0 auto;
+  .author__block__button {
+    margin: 0;
   }
 }
 
@@ -790,7 +613,6 @@ html, body {
   padding: 38px 24px;
   border-radius: 6px;
   background-color: #F9F9F9;
-  margin: 32px 14px 0 14px;
   height: 311px;
   background-image: url(/uminers-category/assets/newsletter-small-background.svg);
   background-repeat: no-repeat;
@@ -799,7 +621,6 @@ html, body {
 @media (min-width: 768px) {
   .newsletter__container {
     height: auto;
-    margin: 30px 24px 0 24px;
     padding: 47px 42px 65px 48px;
     background-position: top 10px center;
   }
@@ -807,7 +628,6 @@ html, body {
 @media (min-width: 1200px) {
   .newsletter__container {
     width: 100%;
-    margin: 24px 0 30px 0;
   }
 }
 .newsletter__title {
@@ -861,8 +681,8 @@ html, body {
   max-width: 270px;
   height: 50px;
   color: #ffffff;
-  font-weight: 700;
   border: none;
+  font-weight: 700;
   border-radius: 50px;
   margin: 0 auto;
   background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
@@ -874,8 +694,122 @@ html, body {
   }
 }
 
+.author-articles__container {
+  padding: 18px 22px;
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.1);
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .author-articles__container {
+    padding: 51px 57px 49px 37px;
+  }
+}
+@media (min-width: 1200px) {
+  .author-articles__container {
+    padding: 30px 45px 44px;
+  }
+}
+.author-articles__item-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+@media (min-width: 768px) {
+  .author-articles__item-title {
+    margin-top: 0;
+  }
+}
+.author-articles__item-image {
+  height: 166px;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .author-articles__item-image {
+    width: 200px;
+  }
+}
+.author-articles__item-image img {
+  width: 100%;
+  object-fit: cover;
+}
+.author-articles__item:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .author-articles__item:not(:last-of-type) {
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+}
+.author-articles__title {
+  margin: 0 0 26px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.author-articles__summary {
+  margin-top: 14px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .author-articles__summary {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .author-articles__content-wrapper {
+    display: flex;
+    gap: 34px;
+    margin-bottom: 11px;
+  }
+}
+.author-articles__text-wrapper {
+  flex: 1;
+}
+.author-articles__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .author-articles__info-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.author-articles__tag {
+  margin: 0;
+  opacity: 0.3;
+}
+@media (min-width: 768px) {
+  .author-articles__tag {
+    width: auto;
+  }
+}
+.author-articles__datetime {
+  margin: 0;
+  color: #3778FF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 .new-articles__container {
-  margin: 32px 14px 0;
   padding: 27px 23px;
   border-radius: 6px;
   background: #FFF;
@@ -883,13 +817,11 @@ html, body {
 }
 @media (min-width: 768px) {
   .new-articles__container {
-    margin: 30px 22px 0;
     padding: 30px 42px 50px 45px;
   }
 }
 @media (min-width: 1200px) {
   .new-articles__container {
-    margin: 0;
     padding: 30px 45px 44px;
   }
 }
@@ -1139,4 +1071,4 @@ html, body {
   }
 }
 
-/*# sourceMappingURL=category.css.map */
+/*# sourceMappingURL=author.css.map */

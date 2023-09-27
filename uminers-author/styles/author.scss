@@ -23,6 +23,53 @@ html, body {
   flex-direction: column;
 }
 
+// Хлебные крошки
+
+.breadcrumbs {
+  &__container {
+    max-width: 1140px;
+    margin: 30px auto 0 14px;
+    display: flex;
+    gap: 4px;
+    height: fit-content;
+
+    @include for-tablet {
+      margin-left: 22px;
+    }
+
+    @include for-desktop-large {
+      grid-column: 1;
+      grid-row: 1;
+      margin-left: auto;
+      width: 100%;
+      margin-right: auto;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:not(:first-of-type) {
+      &::before {
+        content: '/';
+        color: #888A8F;
+        display: inline-block;
+        width: 10px;
+      }
+    }
+
+    &:last-of-type {
+      color: #888A8F;
+      &::before {
+        color: #888A8F;
+      }
+    }
+  }
+}
+
 // Шапка
 
 .main-header {
@@ -387,445 +434,212 @@ html, body {
   }
 }
 
+// Обертка бокового контента
+
+.side__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include for-tablet {
+    gap: 30px;
+  }
+
+  @include for-desktop-large {
+    gap: 20px;
+  }
+}
+
 // Обертка содержимого главной страницы
 
-.main-content {
+.main-content-wrapper {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 70px;
+  padding: 22px 14px 70px;
+
+  @include for-tablet {
+    padding: 30px 22px 70px;
+  }
 
   @include for-desktop-large {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 435px;
-    gap: 25px;
+    gap: 20px;
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 96px;
+    padding: 45px 0 96px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
   }
 }
 
-// Курсы криптовалют
+// Об авторе
 
-.crypto-rates {
-  &__container {
-    margin-top: 25px;
-    padding: 0 13px;
+.author__block {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: #FFF;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
+  padding: 16px 22px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
 
-    @include for-tablet {
-      padding: 0 22px;
-      margin-top: 32px;
-    }
+  @include for-tablet {
+    flex-direction: row;
+    gap: 26px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 39px;
+    align-items: flex-start;
+  }
 
-    @include for-desktop-large {
-      max-width: 474px;
-      width: 100%;
-      margin-top: 0;
-    }
+  @include for-desktop-large {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 51px 17px 58px 44px;
+  }
 
-    @include for-desktop-large {
-      padding: 0;
+  &-image {
+    margin-bottom: 13px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      height: 100px;
     }
   }
 
-  &__title {
-    margin: 0 0 22px;
-    color: #000;
-    font-size: 22px;
+  &-content {
+    @include for-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &-name {
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
-  }
-
-  &__block {
-    border-radius: 6px;
-    flex-grow: 1;
-    padding: 27px 14px 31px;
-    background: linear-gradient(154deg, #475EFF 2.67%, #0042CC 94.57%);
+    text-align: center;
+    margin: 0;
 
     @include for-tablet {
-      padding: 30px 34px 52px 34px;
-    }
-
-    @include for-desktop-large {
-      padding: 30px 36px 57px 36px;
-    }
-
-    &-datetime {
-      &-wrapper {
-        display: flex;
-        margin-bottom: 28px;
-        justify-content: space-between;
-      }
-
-      &-item {
-        margin: 0;
-        color: #FFF;
-        text-align: right;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%;
-      }
-    }
-
-    &-currencies-wrapper {
-      margin-bottom: 28px;
-
-      @include for-tablet {
-        margin-bottom: 38px;
-      }
-    }
-
-    &-buttons-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 21px;
-    }
-
-    &-button {
-      width: 266px;
-      height: 56px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      background: none;
-      border: 1px solid white;
-      color: #FFF;
-      text-align: center;
+      font-size: 32px;
+      font-style: normal;
       font-weight: 700;
-      cursor: pointer;
+    }
+  }
+
+  &-position {
+    margin: 0 0 19px 0;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    padding-bottom: 19px;
+
+    @include for-tablet {
+      padding: 0;
+      margin-top: 10px;
+    }
+  }
+
+  &-description {
+    position: relative;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    margin: 0;
+
+    @include for-tablet {
+      margin-top: 15px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      opacity: 0.1;
+      background: #000;
+      top: -19px;
 
       @include for-tablet {
-        width: 315px;
-      }
-    }
-
-    &-currency {
-      display: flex;
-
-      &:not(:last-of-type) {
-        padding-bottom: 14px;
-        margin-bottom: 14px;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.3);
-
-        @include for-tablet {
-          border-bottom: none;
-          padding-bottom: 0;
-        }
-      }
-
-      &-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 26px;
-        height: 26px;
-        margin-right: 9px;
-        border-radius: 50%;
-        background-color: #fff;
-
-        @include for-tablet {
-          height: 50px;
-          width: 50px;
-          margin-right: 23px;
-        }
-
-        img {
-          height: 16px;
-          width: 16px;
-
-          @include for-tablet {
-            width: 30px;
-            height: 30px;
-          }
-        }
-      }
-
-      &-data {
-        display: flex;
-        flex: 5;
-        flex-direction: column;
-      }
-
-      &-rate {
-        &:first-of-type {
-          margin-bottom: 6px;
-        }
-
-        display: flex;
-        justify-content: space-between;
-
-        &-name, &-price, &-abbreviation, &-percentage {
-          margin: 0;
-          color: #FFF;
-          font-size: 16px;
-          font-style: normal;
-          line-height: 160%;
-        }
-
-        &-name, &-price {
-          font-weight: 700;
-        }
+        content: none;
       }
     }
   }
-}
 
-// Все новости
-
-.all-news {
-
-  &__container {
-    padding: 0 14px;
-
-    @include for-tablet {
-      padding: 0 22px;
-    }
-
-    @include for-desktop-large {
-      padding: 0;
-    }
-  }
-
-  &__header {
-    @include for-tablet {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      margin-top: 40px;
-    }
-
-    @include for-desktop-large {
-      margin-top: 0;
-      margin-bottom: 26px;
-    }
-
-    &-content {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  &__menu {
+  &-socials {
+    margin-top: 27px;
     display: flex;
-    gap: 6px;
-    margin: 22px 0;
-    overflow-x: auto;
+    gap: 9px;
+    justify-content: center;
 
     @include for-tablet {
-      width: 460px;
-      gap: 10px;
-      margin: 0 0 0 auto;
-    }
-
-    @include for-desktop {
-      overflow-x: hidden;
-    }
-
-    @include for-desktop-large {
-      width: 100%;
+      margin-top: 0;
     }
 
     &-item {
-      height: 40px;
-      padding: 0 38px;
+      height: 44px;
+      width: 44px;
       display: flex;
-      font-size: 16px;
-      font-weight: 700;
       align-items: center;
       justify-content: center;
-      border-radius: 50px;
-      background: #F5F5F5;
-      cursor: pointer;
+      border-radius: 6px;
+      background: rgba(217, 217, 217, 0.5);
 
-      &--active {
-        color: #3778FF;
-      }
-    }
-  }
-
-  &__next-btn {
-    width: 32px;
-    height: 40px;
-    margin-left: 8px;
-    border-radius: 6px;
-    background: #F5F5F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-
-    @include for-tablet {
-      width: 42px;
-      margin-left: 11px;
-    }
-  }
-
-  &__title {
-    margin: 0 0 29px 0;
-
-    @include for-tablet {
-      margin: 0;
-      font-size: 32px;
-      font-weight: 700;
-      top: -4px;
-      position: relative;
-    }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-
-    @include for-tablet {
-      gap: 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: relative;
-      padding-bottom: 40px;
-
-      &::after {
-        position: absolute;
-        content: '';
-        margin-top: 26px;
-        width: 100%;
-        height: 1px;
-        opacity: 0.1;
-        background: #000;
-
-        @include for-tablet {
-          margin-top: 0;
-          bottom: 0;
-        }
+      &--add {
+        background: #3778FF;
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
       }
     }
 
-    @include for-desktop {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @include for-desktop-large {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  &__card {
-    position: relative;
-    max-width: 294px;
-    margin: 0 auto;
-    cursor: pointer;
-
-
-    @include for-tablet {
-      max-width: 352px;
-    }
-
-    @include for-desktop {
-      max-width: 367px;
-    }
-
-    &-image {
-      object-fit: contain;
-
-      img {
-        max-width: 100%;
-        object-fit: cover;
-      }
+    &-wrapper {
+      margin-top: 33px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       @include for-tablet {
-        max-width: 100%;
-        max-height: 200px;
-        height: 100%;
-        display: flex;
-      }
-    }
-
-    &:last-of-type {
-      &::after {
-        position: absolute;
-        content: '';
-        margin-top: 26px;
+        flex-direction: row;
         width: 100%;
-        height: 1px;
-        opacity: 0.1;
-        background: #000;
-
-        @include for-tablet {
-          content: none;
-        }
+        gap: 20px;
       }
-    }
-
-    &-date {
-      padding-top: 16px;
-      color: #3778FF;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 160%;
-      opacity: 0.99;
-    }
-
-    &-summary {
-      padding-top: 5px;
-      margin: 0;
-      color: #000;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 160%;
-      height: 87px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-
-    &-button {
-      display: flex;
-      width: 52px;
-      height: 38px;
-      margin-top: 14px;
-      border-radius: 10px;
-      background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
     }
   }
 
-  &__show-button {
-    width: 220px;
-    height: 56px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
+  &__button {
+    width: 100%;
+    max-width: 270px;
+    height: 50px;
     color: #ffffff;
-    display: flex;
-    margin: 57px auto 0 auto;
-    align-items: center;
-    justify-content: center;
-    background: var(--0001, linear-gradient(97deg, #5E35FF 0%, #357AFF 100%));
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
     cursor: pointer;
 
     @include for-tablet {
-      margin: 30px auto 0 auto;
+      margin: 0;
     }
   }
 }
@@ -839,7 +653,6 @@ html, body {
     padding: 38px 24px;
     border-radius: 6px;
     background-color: #F9F9F9;
-    margin: 32px 14px 0 14px;
     height: 311px;
     background-image: url(/uminers-category/assets/newsletter-small-background.svg);
     background-repeat: no-repeat;
@@ -847,14 +660,12 @@ html, body {
 
     @include for-tablet {
       height: auto;
-      margin: 30px 24px 0 24px;
       padding: 47px 42px 65px 48px;
       background-position: top 10px center;
     }
 
     @include for-desktop-large {
       width: 100%;
-      margin: 24px 0 30px 0;
     }
   }
 
@@ -907,8 +718,8 @@ html, body {
     max-width: 270px;
     height: 50px;
     color: #ffffff;
-    font-weight: 700;
     border: none;
+    font-weight: 700;
     border-radius: 50px;
     margin: 0 auto;
     background: linear-gradient(97deg, #5E35FF 0%, #357AFF 100%);
@@ -920,24 +731,147 @@ html, body {
   }
 }
 
+// Статьи автора
+
+.author-articles {
+
+  &__container {
+    padding: 18px 22px;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
+    margin-bottom: 20px;
+
+    @include for-tablet {
+      padding: 51px 57px 49px 37px;
+    }
+
+    @include for-desktop-large {
+      padding: 30px 45px 44px;
+    }
+  }
+
+  &__item {
+
+    &-title {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+
+      @include for-tablet {
+        margin-top: 0;
+      }
+    }
+
+    &-image {
+      height: 166px;
+      display: flex;
+
+      @include for-tablet {
+        width: 200px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+
+      @include for-tablet {
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 26px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__summary {
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include for-tablet {
+      margin: 0;
+    }
+  }
+
+  &__content-wrapper {
+    @include for-tablet {
+      display: flex;
+      gap: 34px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1;
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include for-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    opacity: .3;
+
+    @include for-tablet {
+      width: auto;
+    }
+  }
+
+  &__datetime {
+    margin: 0;
+    color: #3778FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
 // Свежие статьи
 
 .new-articles {
 
   &__container {
-    margin: 32px 14px 0;
     padding: 27px 23px;
     border-radius: 6px;
     background: #FFF;
     box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
 
     @include for-tablet {
-      margin: 30px 22px 0;
       padding: 30px 42px 50px 45px;
     }
 
     @include for-desktop-large {
-      margin: 0;
       padding: 30px 45px 44px;
     }
   }
