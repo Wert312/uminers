@@ -792,7 +792,7 @@ html, body {
   background-color: #F9F9F9;
   margin: 32px 14px 0 14px;
   height: 311px;
-  background-image: url(/uminers-category/assets/newsletter-small-background.svg);
+  background-image: url(../../uminers-category/assets/newsletter-small-background.svg);
   background-repeat: no-repeat;
   background-position: top right -5px;
 }
