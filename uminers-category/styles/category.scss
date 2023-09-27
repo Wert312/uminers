@@ -688,8 +688,8 @@ html, body {
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 22px;
 
     @include for-tablet {
@@ -726,7 +726,6 @@ html, body {
 
   &__card {
     position: relative;
-    max-width: 294px;
     margin: 0 auto;
     cursor: pointer;
 
@@ -743,8 +742,9 @@ html, body {
       object-fit: contain;
 
       img {
-        max-width: 100%;
+        width: 100%;
         object-fit: cover;
+        height: 208px;
       }
 
       @include for-tablet {
