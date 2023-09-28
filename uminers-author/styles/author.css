@@ -398,7 +398,8 @@ html, body {
 }
 @media (min-width: 1200px) {
   .main-header__sections-dropdown-content-wrapper--offset {
-    left: 142px;
+    margin-left: -125px;
+    left: unset;
   }
 }
 
