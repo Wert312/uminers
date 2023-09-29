@@ -416,8 +416,16 @@ html, body {
 
 .breadcrumbs {
   &__container {
-    display: flex;
-    gap: 4px;
+    max-width: 1140px;
+    height: fit-content;
+
+    @include for-desktop-large {
+      grid-column: 1;
+      grid-row: 1;
+      margin-left: auto;
+      width: 100%;
+      margin-right: auto;
+    }
   }
 
   &__link {

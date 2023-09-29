@@ -388,8 +388,17 @@ html, body {
 }
 
 .breadcrumbs__container {
-  display: flex;
-  gap: 4px;
+  max-width: 1140px;
+  height: fit-content;
+}
+@media (min-width: 1200px) {
+  .breadcrumbs__container {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: auto;
+    width: 100%;
+    margin-right: auto;
+  }
 }
 .breadcrumbs__link {
   text-decoration: none;

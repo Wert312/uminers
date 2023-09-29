@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uminers</title>
     <link rel="stylesheet" href="styles/article.css">
+    <script defer src="scripts/swiper.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
 <div class="page-container">
@@ -61,7 +64,8 @@
                             <div class="main-header__sections-dropdown-block">
                                 <h3 class="main-header__sections-dropdown-title">Главные новости</h3>
                                 <div class="main-header__sections-dropdown-links-wrapper">
-                                    <a href="../uminers-category/category.html" class="main-header__sections-dropdown-link">Майнинг</a>
+                                    <a href="../uminers-category/category.html"
+                                       class="main-header__sections-dropdown-link">Майнинг</a>
                                     <a href="" class="main-header__sections-dropdown-link">Регулирование</a>
                                     <a href="" class="main-header__sections-dropdown-link">Трейдинг</a>
                                 </div>
@@ -120,74 +124,410 @@
         </nav>
     </header>
     <div class="breadcrumbs__container">
-        <a href="../../uminers/index.html" class="breadcrumbs__link">Главная</a>
-        <a href="../uminers-experts/experts.html" class="breadcrumbs__link">Эксперты</a>
-        <a href="../uminers-experts/experts.html" class="breadcrumbs__link">Дмитрий Носков</a>
+        <a href="../../uminers/index.html" class="breadcrumbs__link">Новости</a>
+        <a href="../uminers-category/category.html" class="breadcrumbs__link">Майнинг</a>
+        <a href="../uminers-article/article.html" class="breadcrumbs__link">Майнинг криптовалют в США приводит к
+            огромным выбросам углекислого газа</a>
     </div>
     <div class="main-content-wrapper">
         <div class="main-content">
-            <div class="author__block">
-                <div class="author__block-image">
-                    <img src="assets/image%2026.png" alt="expert card image">
-                </div>
-                <div class="author__block-content">
-                    <p class="author__block-name">Дмитрий Носков</p>
-                    <p class="author__block-position">Эксперт криптобиржи StormGain</p>
-                    <p class="author__block-description">
-                        Аналитик. Пишу аналитические статьи. Торговать криптовалютой начал в 2015 году, когда написал первого робота на основе индикаторов волатильности. В 2016 году собрал первый риг для майнинга. Интересуюсь сферой информационных технологий и безопасности.
-                    </p>
-                    <div class="author__block-socials-wrapper">
-                        <button class="author__block__button">Подписаться</button>
-                        <div class="author__block-socials">
-                            <div class="author__block-socials-item">
-                                <img src="../uminers-author/assets/vk-logo-of-social-network%20(2)%201.svg" alt="social icon">
+            <div class="article">
+                <div class="article__header">
+                    <h2 class="article__header-title">Майнинг криптовалют в США приводит к огромным выбросам углекислого
+                        газа</h2>
+                    <div class="article__header-data-wrapper">
+                        <div class="article__header-data-item">
+                            <p class="article__header-data-item-text">Новости</p>
+                        </div>
+                        <div class="article__header-data-item">
+                            <p class="article__header-data-item-text">03 May 2021</p>
+                        </div>
+                        <div class="article__header-data-item">
+                            <div class="article__header-data-item-image">
+                                <img src="../uminers-article/assets/free-icon-font-eye-3917112%201.svg" alt="eye icon">
                             </div>
-                            <div class="author__block-socials-item">
+                            <p class="article__header-data-item-text">Просмотров: 489</p>
+                        </div>
+                        <div class="article__header-data-item">
+                            <div class="article__header-data-item-image">
+                                <img src="../uminers-article/assets/free-icon-font-clock-three-7602696%201.svg"
+                                     alt="clock icon">
+                            </div>
+                            <p class="article__header-data-item-text">Читать: 2 мин</p>
+                        </div>
+                    </div>
+                    <div class="article__header-socials-wrapper">
+                        <button class="article__header-btn">
+                            <img src="../uminers-article/assets/bookmark.svg" alt="bookmark icon"
+                                 class="article__header-btn-img">
+                            В закладки
+                        </button>
+                        <div class="article__header-socials">
+                            <div class="article__header-socials-item">
+                                <img src="../uminers-author/assets/vk-logo-of-social-network%20(2)%201.svg"
+                                     alt="social icon">
+                            </div>
+                            <div class="article__header-socials-item">
                                 <img src="../uminers-author/assets/facebook-app-symbol%201.svg" alt="social icon">
                             </div>
-                            <div class="author__block-socials-item">
-                                <img src="../uminers-author/assets/vk-logo-of-social-network%20(2)%201.svg" alt="social icon">
+                            <div class="article__header-socials-item">
+                                <img src="../uminers-author/assets/twitter%201.svg" alt="social icon">
                             </div>
-                            <div class="author__block-socials-item author__block-socials-item--add">+</div>
+                            <div class="article__header-socials-item article__header-socials-item--add">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__contents">
+                    <h2 class="article__contents-title">Оглавление:</h2>
+                    <ul class="article__contents-list">
+                        <li class="article__contents-list-item">В статье, опубликованной в недавнем выпуске</li>
+                        <li class="article__contents-list-item">Критики утверждают, что это противоречит глобальным</li>
+                        <li class="article__contents-list-item">Недавнем выпуске газеты New York Times</li>
+                        <li class="article__contents-list-item">Это вновь вызвало дискуссию о майнинге криптовалют</li>
+                        <li class="article__contents-list-item">В статье, опубликованной в недавнем выпуске</li>
+                        <li class="article__contents-list-item">Критики утверждают, что это противоречит глобальным</li>
+                        <li class="article__contents-list-item">Недавнем выпуске газеты New York Times</li>
+                    </ul>
+                </div>
+                <div class="article__text-wrapper">
+                    <h2 class="article__text-title">
+                        Введение
+                    </h2>
+                    <p class="article__text-item">
+                        В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный» взгляд
+                        на экологическое воздействие добычи BTC в США. Их исследование показало, что 85% энергии,
+                        используемой для добычи цифрового золота, производится из ископаемого топлива, что приводит к
+                        огромным выбросам углекислого газа.
+                        Это вновь вызвало дискуссию о майнинге криптовалют и его влияние на изменение климата. Критики
+                        утверждают, что это противоречит глобальным усилиям по сокращению выбросов и замедлению
+                        глобального потепления. Кроме того, это проливает свет на экономические последствия майнинга
+                        биткоина, особенно подчеркивая ситуацию в Техасе, где спрос на электроэнергию привел к повышению
+                        цен на электричество на 5% для населения.
+                    </p>
+                    <div class="article__text-image">
+                        <img src="../uminers-article/assets/image%209.png" alt="article image">
+                    </div>
+                    <p class="article__text-item">
+                        В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный» взгляд
+                        на экологическое воздействие добычи BTC в США. Их исследование показало, что 85% энергии,
+                        используемой для добычи цифрового золота, производится из ископаемого топлива, что приводит к
+                        огромным выбросам углекислого газа
+                    </p>
+                    <div class="article__text-quote">
+                        <div class="article__text-quote-content">
+                            <p class="article__text-quote-text">
+                                В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный»
+                                взгляд на экологическое воздействие добычи BTC в США.
+                            </p>
+                            <p class="article__text-quote-author">
+                                Александр Иванов
+                            </p>
+                            <p class="article__text-quote-author-position">
+                                Директор компании “Blockchain24.pro”
+                            </p>
+                        </div>
+                    </div>
+                    <p class="article__text-item">
+                        В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный» взгляд
+                        на экологическое воздействие добычи BTC в США.
+                    </p>
+                    <div class="article__text-slider swiper swiper2">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                            <div class="article__text-slide swiper-slide">
+                                <div class="article__text-slide-image">
+                                    <img src="../uminers-article/assets/american-flag.png" alt="article alike slide">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="article__text-pagination swiper-pagination swiper-pagination2"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <p class="article__text-item">
+                        В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный» взгляд
+                        на экологическое воздействие добычи BTC в США. Их исследование показало, что 85% энергии,
+                        используемой для добычи цифрового золота, производится из ископаемого топлива, что приводит к
+                        огромным выбросам углекислого газа.
+                        Это вновь вызвало дискуссию о майнинге криптовалют и его влияние на изменение климата. Критики
+                        утверждают, что это противоречит глобальным усилиям по сокращению выбросов и замедлению
+                        глобального потепления. Кроме того, это проливает свет на экономические последствия майнинга
+                        биткоина, особенно подчеркивая ситуацию в Техасе, где спрос на электроэнергию привел к повышению
+                        цен на электричество на 5% для населения.
+                    </p>
+                    <div class="article__text-highlight">
+                        <p class="article__text-highlight-item">В статье, опубликованной в недавнем выпуске газеты New
+                            York Times, представлен «мрачный» взгляд на экологическое воздействие добычи BTC в США. </p>
+                        <p class="article__text-highlight-item">Это вновь вызвало дискуссию о майнинге криптовалют и его
+                            влияние на изменение климата.</p>
+                    </div>
+                    <p class="article__text-item">
+                        В статье, опубликованной в недавнем выпуске газеты New York Times, представлен «мрачный» взгляд
+                        на экологическое воздействие добычи BTC в США. Их исследование показало, что 85% энергии,
+                        используемой для добычи цифрового золота, производится из ископаемого топлива, что приводит к
+                        огромным выбросам углекислого газа
+                    </p>
+                    <div class="article__text-table-wrapper">
+                        <h3 class="article__text-table-title">Ниже в таблице приведены данные за 2023 г.</h3>
+                        <div class="article__text-table">
+                            <div class="article__text-table-head">
+                                <div class="article__text-table-head-item"></div>
+                                <div class="article__text-table-head-item">ETH*</div>
+                                <div class="article__text-table-head-item">BTC</div>
+                                <div class="article__text-table-head-item">Other</div>
+                            </div>
+                            <div class="article__text-table-row">
+                                <div class="article__text-table-row-item article__text-table-row-item--bold">I квартал</div>
+                                <div class="article__text-table-row-item">+0.83</div>
+                                <div class="article__text-table-row-item">+0.83</div>
+                                <div class="article__text-table-row-item">+0.83</div>
+                            </div>
+                            <div class="article__text-table-row">
+                                <div class="article__text-table-row-item article__text-table-row-item--bold">II квартал</div>
+                                <div class="article__text-table-row-item">+0.123</div>
+                                <div class="article__text-table-row-item">+0.123</div>
+                                <div class="article__text-table-row-item">+0.123</div>
+                            </div>
+                            <div class="article__text-table-row">
+                                <div class="article__text-table-row-item article__text-table-row-item--bold">III квартал</div>
+                                <div class="article__text-table-row-item">-0.3</div>
+                                <div class="article__text-table-row-item">-0.3</div>
+                                <div class="article__text-table-row-item">-0.3</div>
+                            </div>
+                            <div class="article__text-table-row">
+                                <div class="article__text-table-row-item article__text-table-row-item--bold">IV квартал</div>
+                                <div class="article__text-table-row-item">+0.1</div>
+                                <div class="article__text-table-row-item">+0.1</div>
+                                <div class="article__text-table-row-item">+0.1</div>
+                            </div>
+                        </div>
+                        <p class="article__text-table-legend">
+                            * ETH - криптовалюта эфириум
+                        </p>
+                    </div>
+                    <h2 class="article__text-title">
+                        О майнинге
+                    </h2>
+                    <p class="article__text-item">Это вновь вызвало дискуссию о майнинге криптовалют и его влияние на
+                        изменение климата. Критики утверждают, что это противоречит глобальным усилиям по сокращению
+                        выбросов и замедлению глобального потепления. Кроме того, это проливает свет на экономические
+                        последствия майнинга биткоина, особенно подчеркивая ситуацию в Техасе, где спрос на
+                        электроэнергию привел к повышению цен на электричество на 5% для населения.</p>
+                    <h2 class="article__text-title article__text-title--small">
+                        О майнинге
+                    </h2>
+                    <p class="article__text-item">
+                        Это вновь вызвало дискуссию о майнинге криптовалют и его влияние на изменение климата. Критики
+                        утверждают, что это противоречит глобальным усилиям по сокращению выбросов и замедлению
+                        глобального потепления.
+                    </p>
+                </div>
+                <div class="article__author">
+                    <p class="article__author-title">Автор статьи:</p>
+                    <div class="article__author-profile">
+                        <div class="article__author-image">
+                            <img src="../uminers-article/assets/image%2026.png" alt="author image">
+                        </div>
+                        <div class="article__author-info">
+                            <p class="article__author-name">Дмитрий Носков</p>
+                            <p class="article__author-position">Эксперт криптобиржи StormGain</p>
+                        </div>
+                    </div>
+                    <hr class="article__author-divider">
+                    <div class="article__author-rating-wrapper">
+                        <p class="article__author-rating-text">Понравилась статья</p>
+                        <div class="article__author-rating-counter">
+                            <button class="article__author-rating-btn article__author-rating-btn--dislike">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" color="currentColor" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z " fill="currentColor"/></svg>
+                            </button>
+                            <p class="article__author-rating-number">0</p>
+                            <button class="article__author-rating-btn article__author-rating-btn--like">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" color="currentColor" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z " fill="currentColor"/></svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="author-articles__container">
-                <h2 class="author-articles__title">Статьи Дмитрия Носкова</h2>
-                <div class="author-articles__item">
-                    <div class="author-articles__content-wrapper">
-                        <div class="author-articles__item-image">
-                            <img src="assets/image%205.png" alt="">
-                        </div>
-                        <div class="author-articles__text-wrapper">
-                            <p class="author-articles__item-title">В Германии разрешат выпускать криптоакции; что это за бумаги и каковы их перспективы</p>
-                            <p class="author-articles__summary">Власти Германия с 2024 года разрешат компаниям выпуск криптоакций, которые заменят традиционные ценные бумаги типа акций и облигаций их цифровыми версиями в виде токенов. Каковы же возможные перспекти...</p>
-                        </div>
-                    </div>
-                    <div class="author-articles__info-wrapper">
-                        <p class="author-articles__tag">Новости</p>
-                        <p class="author-articles__datetime">03 May 2021</p>
-                    </div>
+            <div class="articles-alike__container">
+                <div class="articles-alike__title-wrapper">
+                    <h2 class="articles-alike__title">Похожие статьи</h2>
                 </div>
-                <div class="author-articles__item">
-                    <div class="author-articles__content-wrapper">
-                        <div class="author-articles__item-image">
-                            <img src="assets/image%205.png" alt="">
+                <div class="articles-alike__slider swiper swiper1">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="articles-alike__slide swiper-slide">
+                            <div class="articles-alike__slide-image">
+                                <img src="../uminers-article/assets/image%205.png" alt="article alike slide">
+                            </div>
+                            <div class="articles-alike__slide-description">
+                                <h3 class="articles-alike__slide-datetime">03 May 2021</h3>
+                                <p class="articles-alike__slide-text">В Германии разрешат выпускать криптоакции; что это за бумаги и каковы их перспективы</p>
+                                <p class="articles-alike__slide-tag">Эксклюзивные материалы</p>
+                            </div>
                         </div>
-                        <div class="author-articles__text-wrapper">
-                            <p class="author-articles__item-title">В Германии разрешат выпускать криптоакции; что это за бумаги и каковы их перспективы</p>
-                            <p class="author-articles__summary">Власти Германия с 2024 года разрешат компаниям выпуск криптоакций, которые заменят традиционные ценные бумаги типа акций и облигаций их цифровыми версиями в виде токенов. Каковы же возможные перспекти...</p>
+                        <div class="articles-alike__slide swiper-slide">
+                            <div class="articles-alike__slide-image">
+                                <img src="../uminers-article/assets/image%205.png" alt="article alike slide">
+                            </div>
+                            <div class="articles-alike__slide-description">
+                                <h3 class="articles-alike__slide-datetime">03 May 2021</h3>
+                                <p class="articles-alike__slide-text">В Германии разрешат выпускать криптоакции; что это за бумаги и каковы их перспективы</p>
+                                <p class="articles-alike__slide-tag">Эксклюзивные материалы</p>
+                            </div>
+                        </div>
+                        <div class="articles-alike__slide swiper-slide">
+                            <div class="articles-alike__slide-image">
+                                <img src="../uminers-article/assets/image%205.png" alt="article alike slide">
+                            </div>
+                            <div class="articles-alike__slide-description">
+                                <h3 class="articles-alike__slide-datetime">03 May 2021</h3>
+                                <p class="articles-alike__slide-text">В Германии разрешат выпускать криптоакции; что это за бумаги и каковы их перспективы</p>
+                                <p class="articles-alike__slide-tag">Эксклюзивные материалы</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="author-articles__info-wrapper">
-                        <p class="author-articles__tag">Эксклюзивные материалы</p>
-                        <p class="author-articles__datetime">03 May 2021</p>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="articles-alike__pagination swiper-pagination swiper-pagination1"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
         <div class="side__container">
+            <div class="crypto-rates__container">
+                <h2 class="crypto-rates__title">Курсы криптовалют</h2>
+                <div class="crypto-rates__block">
+                    <div class="crypto-rates__block-datetime-wrapper">
+                        <p class="crypto-rates__block-datetime-item">17.04.2024</p>
+                        <p class="crypto-rates__block-datetime-item">15:28</p>
+                    </div>
+                    <div class="crypto-rates__block-currencies-wrapper">
+                        <div class="crypto-rates__block-currency">
+                            <div class="crypto-rates__block-currency-icon">
+                                <img src="assets/image%2024.svg" alt="currency image">
+                            </div>
+                            <div class="crypto-rates__block-currency-data">
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                    <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                                </div>
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                    <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-rates__block-currency">
+                            <div class="crypto-rates__block-currency-icon">
+                                <img src="assets/image%2024.svg" alt="currency image">
+                            </div>
+                            <div class="crypto-rates__block-currency-data">
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                    <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                                </div>
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                    <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-rates__block-currency">
+                            <div class="crypto-rates__block-currency-icon">
+                                <img src="assets/image%2024.svg" alt="currency image">
+                            </div>
+                            <div class="crypto-rates__block-currency-data">
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                    <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                                </div>
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                    <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-rates__block-currency">
+                            <div class="crypto-rates__block-currency-icon">
+                                <img src="assets/image%2024.svg" alt="currency image">
+                            </div>
+                            <div class="crypto-rates__block-currency-data">
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                    <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                                </div>
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                    <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-rates__block-currency">
+                            <div class="crypto-rates__block-currency-icon">
+                                <img src="assets/image%2024.svg" alt="currency image">
+                            </div>
+                            <div class="crypto-rates__block-currency-data">
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-name">Курс биткоина</p>
+                                    <p class="crypto-rates__block-currency-rate-price">$29907.2</p>
+                                </div>
+                                <div class="crypto-rates__block-currency-rate">
+                                    <p class="crypto-rates__block-currency-rate-abbreviation">BTC</p>
+                                    <p class="crypto-rates__block-currency-rate-percentage">-0.04% (-12.0826)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crypto-rates__block-buttons-wrapper">
+                        <button class="crypto-rates__block-button">Смотреть все курсы валют</button>
+                        <button class="crypto-rates__block-button">Смотреть новости криптовалют</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-themes">
+                <h2 class="popular-themes__title">Популярные темы</h2>
+                <ul class="popular-themes__list">
+                    <li class="popular-themes__list-item">Что с биткоином</li>
+                    <li class="popular-themes__list-item">Майнинг что это</li>
+                    <li class="popular-themes__list-item">Dash</li>
+                    <li class="popular-themes__list-item">Нода</li>
+                    <li class="popular-themes__list-item">Что такое токен</li>
+                    <li class="popular-themes__list-item">Бинанс что это</li>
+                    <li class="popular-themes__list-item">Крипта</li>
+                    <li class="popular-themes__list-item">Цена криптовалюты</li>
+                    <li class="popular-themes__list-item">Асики</li>
+                    <li class="popular-themes__list-item">Хэш что это</li>
+                    <li class="popular-themes__list-item">Криптобиржи</li>
+                </ul>
+            </div>
             <div class="newsletter__container">
                 <h2 class="newsletter__title">Подпишитесь на новости и получайте свежие статьи первыми</h2>
                 <div class="newsletter__form-wrapper">
@@ -195,107 +535,121 @@
                     <button class="newsletter__button">Подписаться</button>
                 </div>
             </div>
-            <div class="new-articles__container">
-                <h2 class="new-articles__title">Главные новости</h2>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+            <div class="additional-links__container">
+                <h2 class="additional-links__title">Главные новости</h2>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Эксклюзивные материалы</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Эксклюзивные материалы</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Эксклюзивные материалы</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Эксклюзивные материалы</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
             </div>
-            <div class="new-articles__container">
-                <h2 class="new-articles__title">Полезные ссылки</h2>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+            <div class="additional-links__container">
+                <h2 class="additional-links__title">Полезные ссылки</h2>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Новости</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Новости</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Эксклюзивные материалы</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Эксклюзивные материалы</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
-                <div class="new-articles__item">
-                    <p class="new-articles__summary">Испытания реальных операций с цифровым рублем Банка России состоятся в мае</p>
-                    <div class="new-articles__info-wrapper">
-                        <p class="new-articles__tag">Эксклюзивные материалы</p>
-                        <p class="new-articles__datetime">03 May 2021</p>
+                <div class="additional-links__item">
+                    <p class="additional-links__summary">Испытания реальных операций с цифровым рублем Банка России
+                        состоятся в мае</p>
+                    <div class="additional-links__info-wrapper">
+                        <p class="additional-links__tag">Эксклюзивные материалы</p>
+                        <p class="additional-links__datetime">03 May 2021</p>
                     </div>
                 </div>
             </div>
@@ -310,7 +664,8 @@
                 <div class="main-footer__contacts">
                     <p class="main-footer__contacts-item">Багратионовский проезд 7к20б</p>
                     <p class="main-footer__contacts-item"><a href="mailto: sales@uminers.com"
-                                                             class="main-footer__contacts--accent">sales@uminers.com</a></p>
+                                                             class="main-footer__contacts--accent">sales@uminers.com</a>
+                    </p>
                     <p class="main-footer__contacts-item">telegram
                         <a href="https://t.me/uminers_sales" class="main-footer__contacts--accent">@uminers_sales</a>
                     </p>

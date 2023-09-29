@@ -29,8 +29,6 @@ html, body {
   &__container {
     max-width: 1140px;
     margin: 30px auto 0 14px;
-    display: flex;
-    gap: 4px;
     height: fit-content;
 
     @include for-tablet {
@@ -605,6 +603,7 @@ html, body {
       justify-content: center;
       border-radius: 6px;
       background: rgba(217, 217, 217, 0.5);
+      cursor: pointer;
 
       &--add {
         background: #3778FF;
@@ -754,6 +753,14 @@ html, body {
 
   &__item {
 
+    &-link {
+      text-decoration: none;
+
+      &:visited {
+        color: inherit;
+      }
+    }
+
     &-title {
       margin-top: 15px;
       margin-bottom: 10px;
@@ -860,7 +867,7 @@ html, body {
 
 // Свежие статьи
 
-.new-articles {
+.additional-links {
 
   &__container {
     padding: 27px 23px;
