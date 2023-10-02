@@ -12,6 +12,11 @@ html, body {
   font-family: "Gilroy", sans-serif;
 }
 
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
 .page-container {
   width: 100%;
   height: 100%;
@@ -1095,15 +1100,8 @@ html, body {
     width: 100%;
   }
 }
-.experts__slider .swiper-button-prev,
-.experts__slider .swiper-button-next {
-  display: none;
-}
-@media (min-width: 768px) {
-  .experts__slider .swiper-button-prev,
-  .experts__slider .swiper-button-next {
-    display: block;
-  }
+.experts__slider-wrapper {
+  position: relative;
 }
 .experts__slide {
   border-radius: 6px;
@@ -1150,6 +1148,63 @@ html, body {
 .experts__pagination .swiper-pagination-bullet-active {
   width: 35px;
   background: #3778FF;
+}
+.experts__navigation {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  display: none;
+  background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .experts__navigation {
+    display: block;
+  }
+}
+.experts__navigation-wrapper {
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18px;
+  bottom: 0;
+  margin: auto;
+  z-index: 10000;
+}
+@media (min-width: 992px) {
+  .experts__navigation-wrapper {
+    max-width: 562px;
+  }
+}
+@media (min-width: 1200px) {
+  .experts__navigation-wrapper {
+    max-width: 1140px;
+  }
+}
+.experts__navigation--button-prev {
+  transform: rotate(180deg);
+}
+@media (min-width: 768px) {
+  .experts__navigation--button-prev {
+    left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .experts__navigation--button-prev {
+    left: -75px;
+  }
+}
+@media (min-width: 768px) {
+  .experts__navigation--button-next {
+    right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .experts__navigation--button-next {
+    right: -75px;
+  }
 }
 
 .achievements__container {
@@ -1201,15 +1256,8 @@ html, body {
     width: 100%;
   }
 }
-.achievements__slider .swiper-button-prev,
-.achievements__slider .swiper-button-next {
-  display: none;
-}
-@media (min-width: 768px) {
-  .achievements__slider .swiper-button-prev,
-  .achievements__slider .swiper-button-next {
-    display: block;
-  }
+.achievements__slider-wrapper {
+  position: relative;
 }
 .achievements__slide {
   border-radius: 6px;
@@ -1217,6 +1265,7 @@ html, body {
   display: flex !important;
   padding: 18px;
   box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
+  user-select: none;
 }
 @media (min-width: 768px) {
   .achievements__slide {
@@ -1266,6 +1315,63 @@ html, body {
   width: 35px;
   background: #3778FF;
 }
+.achievements__navigation {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  display: none;
+  background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .achievements__navigation {
+    display: block;
+  }
+}
+.achievements__navigation-wrapper {
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18px;
+  bottom: 0;
+  margin: auto;
+  z-index: 10000;
+}
+@media (min-width: 992px) {
+  .achievements__navigation-wrapper {
+    max-width: 562px;
+  }
+}
+@media (min-width: 1200px) {
+  .achievements__navigation-wrapper {
+    max-width: 1140px;
+  }
+}
+.achievements__navigation--button-prev {
+  transform: rotate(180deg);
+}
+@media (min-width: 768px) {
+  .achievements__navigation--button-prev {
+    left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .achievements__navigation--button-prev {
+    left: -75px;
+  }
+}
+@media (min-width: 768px) {
+  .achievements__navigation--button-next {
+    right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .achievements__navigation--button-next {
+    right: -75px;
+  }
+}
 
 .team__container {
   padding: 0 15px;
@@ -1304,15 +1410,8 @@ html, body {
     margin: 0 auto;
   }
 }
-.team__slider .swiper-button-prev,
-.team__slider .swiper-button-next {
-  display: none;
-}
-@media (min-width: 768px) {
-  .team__slider .swiper-button-prev,
-  .team__slider .swiper-button-next {
-    display: block;
-  }
+.team__slider-wrapper {
+  position: relative;
 }
 .team__slide {
   border-radius: 6px;
@@ -1324,6 +1423,7 @@ html, body {
   justify-content: space-between;
   padding: 0 10px;
   gap: 10px;
+  user-select: none;
 }
 @media (min-width: 768px) {
   .team__slide {
@@ -1379,6 +1479,73 @@ html, body {
 .team__pagination .swiper-pagination-bullet-active {
   width: 35px;
   background: #3778FF;
+}
+.team__navigation {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  display: none;
+  background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .team__navigation {
+    display: block;
+  }
+}
+.team__navigation-wrapper {
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10000;
+}
+@media (min-width: 992px) {
+  .team__navigation-wrapper {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .team__navigation-wrapper {
+    max-width: 1140px;
+  }
+}
+.team__navigation--button-prev {
+  transform: rotate(180deg);
+}
+@media (min-width: 768px) {
+  .team__navigation--button-prev {
+    left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .team__navigation--button-prev {
+    left: -63px;
+  }
+}
+@media (min-width: 1200px) {
+  .team__navigation--button-prev {
+    left: -75px;
+  }
+}
+@media (min-width: 768px) {
+  .team__navigation--button-next {
+    right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .team__navigation--button-next {
+    right: -63px;
+  }
+}
+@media (min-width: 1200px) {
+  .team__navigation--button-next {
+    right: -75px;
+  }
 }
 
 .newsletter__container {
