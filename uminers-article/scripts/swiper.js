@@ -1,7 +1,8 @@
 const swiperText = new Swiper('.swiper1', {
     // Optional parameters
     direction: 'horizontal',
-
+    longSwipes: false,
+    grabCursor: true,
     // If we need pagination
     pagination: {
         el: '.swiper-pagination1',
@@ -29,6 +30,8 @@ const swiperText = new Swiper('.swiper1', {
 const swiperInArticle = new Swiper('.swiper2', {
     // Optional parameters
     direction: 'horizontal',
+    longSwipes: false,
+    grabCursor: true,
 
     // If we need pagination
     pagination: {

@@ -1,7 +1,8 @@
 const swiper = new Swiper('.swiper1', {
     // Optional parameters
     direction: 'horizontal',
-
+    longSwipes: false,
+    grabCursor: true,
     // If we need pagination
     pagination: {
         el: '.swiper-pagination1',
@@ -34,7 +35,8 @@ const swiper = new Swiper('.swiper1', {
 const swiperAchievements = new Swiper('.swiper2', {
     // Optional parameters
     direction: 'horizontal',
-
+    longSwipes: false,
+    grabCursor: true,
     // If we need pagination
     pagination: {
         el: '.swiper-pagination2',
@@ -67,7 +69,8 @@ const swiperAchievements = new Swiper('.swiper2', {
 const swiperTeam = new Swiper('.swiper3', {
     // Optional parameters
     direction: 'horizontal',
-
+    longSwipes: false,
+    grabCursor: true,
     // If we need pagination
     pagination: {
         el: '.swiper-pagination3',

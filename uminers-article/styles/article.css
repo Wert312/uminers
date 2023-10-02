@@ -901,6 +901,7 @@ html, body {
   }
 }
 .article__text-slider-navigation-wrapper {
+  pointer-events: none;
   width: 100%;
   height: 42px;
   position: absolute;
@@ -1805,6 +1806,7 @@ html, body {
   display: flex;
   gap: 11px;
   align-items: center;
+  pointer-events: none;
 }
 @media (min-width: 768px) {
   .articles-alike__slider-navigation-wrapper {
