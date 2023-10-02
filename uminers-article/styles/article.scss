@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.swiper-button-disabled {
+  opacity: .5;
+  cursor: default !important;
+}
+
 html, body {
   display: flex;
   width: 100%;
@@ -939,17 +944,82 @@ html, body {
       padding: 0 6px 34px !important;
       max-width: 500px;
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        display: none;
+      &-wrapper {
+        position: relative;
+      }
+
+      &-navigation {
+        width: 22px;
+        height: 42px;
+        position: absolute;
+        background: #F5F5F5 url("../../uminers-article/assets/menu-next-arrow.svg") no-repeat center center;
+        cursor: pointer;
 
         @include for-tablet {
           display: block;
+          width: 42px;
+        }
+
+        &-wrapper {
+          width: 100%;
+          height: 42px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -18px;
+          bottom: 0;
+          margin: auto;
+          z-index: 10000;
+
+          @include for-desktop {
+            max-width: 562px;
+          }
+
+          @include for-desktop-large {
+            max-width: 1140px;
+          }
+        }
+
+        &--button-prev {
+          transform: rotate(180deg);
+          left: -22px;
+
+          @include for-tablet {
+            left: 0;
+          }
+
+          @include for-desktop {
+            left: -35px;
+          }
+
+          @include for-desktop-large {
+            width: 22px;
+            left: 0;
+          }
+
+        }
+
+        &--button-next {
+          right: -22px;
+
+          @include for-tablet {
+            right: 0;
+          }
+
+          @include for-desktop {
+            right: -35px;
+          }
+
+          @include for-desktop-large {
+            width: 22px;
+            right: 0;
+          }
         }
       }
     }
 
     &-slide {
+      user-select: none;
       border-radius: 15px;
       background: #FFF;
       display: flex !important;
@@ -1779,12 +1849,12 @@ html, body {
 
 .articles-alike {
   &__container {
-    max-width: 685px;
     width: 100%;
 
     @include for-desktop-large {
       width: 100%;
       padding: 0;
+      max-width: 685px;
     }
   }
 
@@ -1799,12 +1869,12 @@ html, body {
 
     &-wrapper {
       display: flex;
-      flex-direction: column;
       margin-top: 40px;
       margin-bottom: 30px;
+      justify-content: space-between;
+      align-items: center;
 
       @include for-tablet {
-        flex-direction: row;
         align-items: center;
         justify-content: space-between;
       }
@@ -1831,12 +1901,33 @@ html, body {
       width: 100%;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: none;
+    &-navigation {
+      width: 33px;
+      height: 42px;
+      background: #F5F5F5 url("../../uminers-article/assets/menu-next-arrow.svg") no-repeat center center;
+      cursor: pointer;
 
       @include for-tablet {
         display: block;
+        width: 42px;
+      }
+
+      &-wrapper {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+
+        @include for-tablet {
+          gap: 14px;
+        }
+      }
+
+      &--button-prev {
+        transform: rotate(180deg);
+      }
+
+      &--button-next {
+
       }
     }
   }

@@ -11,8 +11,8 @@ const swiperText = new Swiper('.swiper1', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.articles-alike__slider-navigation--button-next',
+        prevEl: '.articles-alike__slider-navigation--button-prev',
     },
     breakpoints: {
         320: {
@@ -39,8 +39,8 @@ const swiperInArticle = new Swiper('.swiper2', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.article__text-slider-navigation--button-next',
+        prevEl: '.article__text-slider-navigation--button-prev',
     },
     breakpoints: {
         320: {
