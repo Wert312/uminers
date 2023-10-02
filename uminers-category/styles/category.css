@@ -261,6 +261,7 @@ html, body {
   font-size: 16px;
   display: inline-block;
   width: max-content;
+  font-weight: 700;
 }
 .main-header__sections-dropdown {
   position: static;
@@ -707,6 +708,7 @@ html, body {
   width: 100%;
   object-fit: cover;
   height: 208px;
+  border-radius: 6px;
 }
 @media (min-width: 768px) {
   .all-news__card-image {
@@ -789,10 +791,11 @@ html, body {
   display: flex;
   flex-direction: column;
   padding: 38px 24px;
+  margin: 32px 14px 0;
   border-radius: 6px;
-  background-color: #F9F9F9;
-  margin: 32px 14px 0 14px;
+  background-color: #FFFFFF;
   height: 311px;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.1);
   background-image: url(../../uminers-category/assets/newsletter-small-background.svg);
   background-repeat: no-repeat;
   background-position: top right -5px;
@@ -800,7 +803,7 @@ html, body {
 @media (min-width: 768px) {
   .newsletter__container {
     height: auto;
-    margin: 30px 24px 0 24px;
+    margin: 30px 22px 0;
     padding: 47px 42px 65px 48px;
     background-position: top 10px center;
   }
@@ -808,7 +811,9 @@ html, body {
 @media (min-width: 1200px) {
   .newsletter__container {
     width: 100%;
-    margin: 24px 0 30px 0;
+    padding: 47px 33px 48px 49px;
+    background-position: top 28px right 6px;
+    margin: 24px 0 30px;
   }
 }
 .newsletter__title {

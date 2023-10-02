@@ -329,6 +329,7 @@ html, body {
         font-size: 16px;
         display: inline-block;
         width: max-content;
+        font-weight: 700;
       }
     }
 
@@ -878,12 +879,9 @@ html, body {
       }
 
       &-item {
+        font-weight: 400;
         position: relative;
         line-height: 178%;
-
-        &:not(:last-of-type) {
-          margin-bottom: 10px;
-        }
 
         &::before {
           content: '-';
@@ -932,17 +930,24 @@ html, body {
       color: #000;
       font-size: 16px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 200%;
       margin: 0;
     }
 
     &-slider {
       width: 100%;
-      margin: 16px auto 0 auto;
+      margin: 16px auto 15px auto;
       height: 100%;
-      padding: 0 6px 34px !important;
+      padding: 0 6px 49px !important;
       max-width: 500px;
+
+      @include for-desktop-large {
+        margin: 16px auto 30px auto;
+        height: 100%;
+        padding: 0 6px 49px !important;
+        max-width: 500px;
+      }
 
       &-wrapper {
         position: relative;
@@ -968,7 +973,7 @@ html, body {
           position: absolute;
           left: 0;
           right: 0;
-          top: -18px;
+          top: -42px;
           bottom: 0;
           margin: auto;
           z-index: 10000;
@@ -995,7 +1000,7 @@ html, body {
           }
 
           @include for-desktop-large {
-            width: 22px;
+            width: 42px;
             left: 0;
           }
 
@@ -1013,7 +1018,7 @@ html, body {
           }
 
           @include for-desktop-large {
-            width: 22px;
+            width: 42px;
             right: 0;
           }
         }
@@ -1026,7 +1031,6 @@ html, body {
       background: #FFF;
       display: flex !important;
       flex-direction: column;
-      box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
 
       &-image {
         width: 100%;
@@ -1036,7 +1040,7 @@ html, body {
         img {
           width: 100%;
           object-fit: cover;
-          border-radius: 6px 6px 0 0;
+          border-radius: 6px;
           height: 138px;
         }
       }
@@ -1451,6 +1455,7 @@ html, body {
   background: #FFF;
   box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
   padding: 30px 21px;
+  font-weight: 500;
 
   @include for-tablet {
     padding: 30px 45px 31px;
@@ -1495,8 +1500,9 @@ html, body {
     flex-direction: column;
     padding: 38px 24px;
     border-radius: 6px;
-    background-color: #F9F9F9;
+    background-color: #FFFFFF;
     height: 311px;
+    box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.10);
     background-image: url(../../uminers-category/assets/newsletter-small-background.svg);
     background-repeat: no-repeat;
     background-position: top right -5px;
@@ -1509,6 +1515,8 @@ html, body {
 
     @include for-desktop-large {
       width: 100%;
+      padding: 47px 33px 48px 49px;
+      background-position: top 28px right 6px;
     }
   }
 
@@ -1898,6 +1906,7 @@ html, body {
     @include for-tablet {
       width: 100%;
       max-width: 100%;
+      padding: 0 6px 52px !important;
     }
 
     @include for-desktop-large {
@@ -1942,7 +1951,7 @@ html, body {
     background: #FFF;
     display: flex !important;
     flex-direction: column;
-    box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
+    box-shadow: 0 10px 8px 0 rgba(55, 120, 255, 0.14);
 
     &-image {
       width: 100%;

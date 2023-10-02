@@ -283,6 +283,7 @@ html, body {
         font-size: 16px;
         display: inline-block;
         width: max-content;
+        font-weight: 700;
       }
     }
 
@@ -463,6 +464,7 @@ html, body {
     @include for-tablet {
       display: flex;
       max-width: 100%;
+      margin-bottom: 25px;
     }
 
     &-wrapper {
@@ -772,6 +774,7 @@ html, body {
 
   @include for-desktop {
     gap: 10px;
+    margin-top: 50px;
   }
 
   @include for-desktop-large {
@@ -801,6 +804,10 @@ html, body {
     height: 263px;
   }
 
+  @include for-desktop-large {
+    padding: 30px 20px 17px 26px;
+  }
+
   &-title {
     width: 154px;
     height: 30px;
@@ -808,6 +815,7 @@ html, body {
     align-items: center;
     justify-content: center;
     background: #3778FF;
+    border-radius: 6px;
     color: #FFF;
     font-size: 14px;
     font-style: normal;
@@ -833,6 +841,10 @@ html, body {
     font-size: 14px;
     font-weight: 700;
     margin: 65px 0 9px;
+
+    @include for-desktop-large {
+      margin: 76px 0 9px;
+    }
   }
 
   &-summary {
@@ -867,6 +879,10 @@ html, body {
       justify-content: space-between;
       margin-bottom: 24px;
       margin-top: 40px;
+
+      @include for-desktop-large {
+        margin-top: 57px;
+      }
     }
 
     &-content {
@@ -1101,6 +1117,7 @@ html, body {
 
   &__title {
     font-size: 24px;
+    margin: 0;
 
     @include for-tablet {
       font-size: 32px;
@@ -1111,11 +1128,13 @@ html, body {
       flex-direction: column;
       margin-top: 40px;
       margin-bottom: 30px;
+      gap: 12px;
 
       @include for-tablet {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 0;
       }
 
       @include for-desktop-large {
@@ -1141,7 +1160,6 @@ html, body {
     padding: 0 6px 34px !important;
 
     @include for-tablet {
-      height: 362px;
       width: 562px;
       max-width: 100%;
     }
@@ -1158,15 +1176,24 @@ html, body {
   &__slide {
     border-radius: 6px;
     background: #FFF;
-    box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
+    box-shadow: 0 10px 8px 0 rgba(55, 120, 255, 0.14);
+
+    @include for-tablet {
+      height: 362px;
+    }
 
     &-image {
       width: 100%;
-      max-height: 227px;
+      height: 227px;
       display: flex;
+
+      @include for-tablet {
+        height: 241px;
+      }
 
       img {
         width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -1188,7 +1215,7 @@ html, body {
       color: #000;
       font-size: 16px;
       opacity: 0.4;
-      font-weight: 500;
+      font-weight: 400;
       margin: 0;
     }
   }
@@ -1329,7 +1356,7 @@ html, body {
     background: #FFF;
     display: flex !important;
     padding: 18px;
-    box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
+    box-shadow: 0 10px 8px 0 rgba(55, 120, 255, 0.14);
     user-select: none;
 
     @include for-tablet {
@@ -1493,7 +1520,7 @@ html, body {
   &__slide {
     border-radius: 6px;
     background: #FFF;
-    box-shadow: 0px 10px 20px 0px rgba(55, 120, 255, 0.14);
+    box-shadow: 0 8px 8px 0 rgba(55, 120, 255, 0.14);
     height: 158px !important;
     display: flex !important;
     align-items: center;
@@ -1542,7 +1569,7 @@ html, body {
       color: #000;
       font-size: 16px;
       opacity: 0.4;
-      font-weight: 500;
+      font-weight: 400;
       margin: 0;
     }
   }

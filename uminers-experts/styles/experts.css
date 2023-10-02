@@ -261,6 +261,7 @@ html, body {
   font-size: 16px;
   display: inline-block;
   width: max-content;
+  font-weight: 700;
 }
 .main-header__sections-dropdown {
   position: static;

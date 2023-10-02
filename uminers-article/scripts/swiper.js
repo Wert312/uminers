@@ -22,7 +22,7 @@ const swiperText = new Swiper('.swiper1', {
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 32
+            spaceBetween: 29
         },
     }
 });
@@ -52,7 +52,7 @@ const swiperInArticle = new Swiper('.swiper2', {
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 32
+            spaceBetween: 14
         },
     }
 });
