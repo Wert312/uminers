@@ -1217,6 +1217,7 @@ html, body {
     display: none;
     background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
     cursor: pointer;
+    pointer-events: auto;
 
     @include for-tablet {
       display: block;
@@ -1394,6 +1395,7 @@ html, body {
     display: none;
     background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
     cursor: pointer;
+    pointer-events: auto;
 
     @include for-tablet {
       display: block;
@@ -1569,6 +1571,7 @@ html, body {
     display: none;
     background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
     cursor: pointer;
+    pointer-events: auto;
 
     @include for-tablet {
       display: block;

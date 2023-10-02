@@ -954,6 +954,7 @@ html, body {
         position: absolute;
         background: #F5F5F5 url("../../uminers-article/assets/menu-next-arrow.svg") no-repeat center center;
         cursor: pointer;
+        pointer-events: auto;
 
         @include for-tablet {
           display: block;
@@ -1908,6 +1909,7 @@ html, body {
       height: 42px;
       background: #F5F5F5 url("../../uminers-article/assets/menu-next-arrow.svg") no-repeat center center;
       cursor: pointer;
+      pointer-events: auto;
 
       @include for-tablet {
         display: block;

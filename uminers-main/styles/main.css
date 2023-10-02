@@ -1156,6 +1156,7 @@ html, body {
   display: none;
   background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
   cursor: pointer;
+  pointer-events: auto;
 }
 @media (min-width: 768px) {
   .experts__navigation {
@@ -1323,6 +1324,7 @@ html, body {
   display: none;
   background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
   cursor: pointer;
+  pointer-events: auto;
 }
 @media (min-width: 768px) {
   .achievements__navigation {
@@ -1489,6 +1491,7 @@ html, body {
   display: none;
   background: #F5F5F5 url("../../uminers-main/assets/menu-next-arrow.svg") no-repeat center center;
   cursor: pointer;
+  pointer-events: auto;
 }
 @media (min-width: 768px) {
   .team__navigation {
