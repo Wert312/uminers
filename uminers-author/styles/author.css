@@ -613,8 +613,9 @@ html, body {
   flex-direction: column;
   padding: 38px 24px;
   border-radius: 6px;
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   height: 311px;
+  box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.1);
   background-image: url(../../uminers-category/assets/newsletter-small-background.svg);
   background-repeat: no-repeat;
   background-position: top right -5px;
@@ -629,6 +630,8 @@ html, body {
 @media (min-width: 1200px) {
   .newsletter__container {
     width: 100%;
+    padding: 47px 33px 48px 49px;
+    background-position: top 28px right 6px;
   }
 }
 .newsletter__title {
