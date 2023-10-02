@@ -293,7 +293,7 @@ html, body {
   gap: 30px;
   padding: 20px;
   position: absolute;
-  width: calc(100% - 33px);
+  width: 100%;
   overflow: visible;
   border-top: 3px solid #3778FF;
   z-index: 10000;
@@ -302,7 +302,7 @@ html, body {
   box-shadow: 0 10px 20px 0 rgba(55, 120, 255, 0.14);
 }
 .main-header__sections-dropdown-content-wrapper {
-  width: 100%;
+  width: calc(100% - 33px);
 }
 .main-header__sections-dropdown-content h3 {
   margin-top: 0;
